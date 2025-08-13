@@ -4,9 +4,7 @@
     <title>Tạo API Gateway on AWS System Manager</title>
     <link>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.2-api-gateway/</link>
     <description>Recent content in Tạo API Gateway on AWS System Manager</description>
-    <generator>Hugo</generator>
-    <language>vi</language>
-    <lastBuildDate></lastBuildDate>
-    <atom:link href="https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.2-api-gateway/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 11 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.2-api-gateway/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
