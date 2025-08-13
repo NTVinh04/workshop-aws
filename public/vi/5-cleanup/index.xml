@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Dọn dẹp tài nguyên   :: AWS Workshop</title>
-    <link>https://ntvinh04.github.io/workshop-aws/vi/5-cleanup/index.html</link>
-    <description>Bây giờ là các bước cần tiến hành để xóa các tài nguyên đã tạo.&#xA;Xóa S3 Truy cập S3 Click chọn S3 bucket đã tạo Click Empty. Điền permanently delete, sau đó click Empty để tiến hành xóa object trong bucket. Click Exit. Sau khi xóa hết object trong bucket, click Delete Sau đó nhập tên bucket và click Delte bucket Xóa API Gateway Truy cập API Gateway.&#xA;Click chọn API đã tạo Click Delete Điền confirm và click Delete Xóa CloudWatch Truy cập CloudWatch.</description>
+    <title>Dọn dẹp tài nguyên   on AWS System Manager</title>
+    <link>https://ntvinh04.github.io/workshop-aws/vi/5-cleanup/</link>
+    <description>Recent content in Dọn dẹp tài nguyên   on AWS System Manager</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate></lastBuildDate>

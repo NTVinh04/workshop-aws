@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tạo S3 chứa website :: AWS Workshop</title>
-    <link>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.1-creates3/2.1.1-creates3web/index.html</link>
-    <description>Tạo S3 chứa website Truy cập dịch vụ S3 Click Create bucket. Tại trang Create bucket. Tại mục Bucket name điền chatapp-web. Tại mục Block Public Access settings for this bucket bỏ chọn Block all public access và chọn I acknowledge that the current settings might result in this bucket and the objects within becoming public. để cho tất cả mọi người có thể truy cập vào website Click Create bucket. Sau đó vào S3 chatapp-web đã tạo và chọn Properties kéo xuống tới phần Static website hosting chọn edit Tại mục Static website hosting chọn Enable sẽ mở ra các mục khác Tại mục Hosting type chọn Host a static website Tại mục Index document và Error document nhập index.html và chọn Save changes để s3 lấy index.html làm trang mặc định cho trang web Tiếp theo vào Permissions ở phần Bucket policy chọn edit Vào file code đã tải xuống tìm file bucketPolicyWebchat.json ở file backend/s3 và copy Tại phần Policy dán đoạn policy đã copy vào sau đó chọn Save changes Thông tin&#xD;Sửa link S3 trong file json trên nếu đặt tên khác workshop</description>
+    <title>Tạo S3 chứa website on AWS System Manager</title>
+    <link>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.1-creates3/2.1.1-creates3web/</link>
+    <description>Recent content in Tạo S3 chứa website on AWS System Manager</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate></lastBuildDate>

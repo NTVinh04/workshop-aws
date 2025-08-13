@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tạo Cognito :: AWS Workshop</title>
-    <link>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.4-createcog/index.html</link>
-    <description>Tạo User Pools cho Webchat Trong bước này sẽ tiến hành tạo User pools để quản lý việc đăng ký, đăng nhập và xác minh cho người dùng&#xA;Truy cập vào dịch vụ Cognito Ở giao diện của cognito click Get started for free in less than five minutes hoặc ở thanh điều hướng bên trái click User pools, sau đó chọn Create user pool.&#xA;Ở mục Application type chọn Single-page application (SPA) vì SPA hỗ trợ tốt nhất cho các web sử dụng url thay đổi dựa trên hoạt động của người dùng giống như React. Ở phần Configure options mục Options for sign-in identifiers chọn email Ở mục Required attributes for sign-up chọn email và name để khi người dùng đăng ký bắt buộc phải nhập các thông tin đó mà không được bỏ qua Sau đó click Create user directory để tạo User pool Sau khi tạo xong quay lại giao diện User pools và chọn User pools vừa tạo Copy User pool ID ở giao diện User pool.&#xA;Sau đó vào phần search của file code và dán vào Replace, tìm file README.md và tìm dòng userpoolId copy và dán vào Search và nhấn Replace All để thay thế userpooldId ở trong code Ở thanh điều hướng bên trái, click App clients và chọn chatapp. Copy ClientID của chatapp sau đó thực hiện tương tự thay ClientID vừa tạo từ user pools cho ClientID của code Sau khi tạo xong 2 bucket trong S3, 2 table trong DynamoDB và đã tạo xong Userpool trong Cognito thì bước tiếp theo là tạo Lambda và API Gateway cho các Lambda</description>
+    <title>Tạo Cognito on AWS System Manager</title>
+    <link>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.4-createcog/</link>
+    <description>Recent content in Tạo Cognito on AWS System Manager</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate></lastBuildDate>

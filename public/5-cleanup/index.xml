@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Clean up resources :: AWS Workshop</title>
-    <link>https://ntvinh04.github.io/workshop-aws/5-cleanup/index.html</link>
-    <description>We will take the following steps to delete the resources we created in this exercise.&#xA;Delete EC2 instance Go to EC2 service management console&#xA;Click Instances. Select both Public Linux Instance and Private Windows Instance instances. Click Instance state. Click Terminate instance, then click Terminate to confirm. Go to IAM service management console&#xA;Click Roles. In the search box, enter SSM. Click to select SSM-Role. Click Delete, then enter the role name SSM-Role and click Delete to delete the role.</description>
+    <title>Clean up resources on AWS System Manager</title>
+    <link>https://ntvinh04.github.io/workshop-aws/5-cleanup/</link>
+    <description>Recent content in Clean up resources on AWS System Manager</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate></lastBuildDate>

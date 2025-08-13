@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Create VPC Endpoint :: AWS Workshop</title>
-    <link>https://ntvinh04.github.io/workshop-aws/3-lambda-api/3.2-api-gateway/3.2.1-websocket/index.html</link>
-    <description>Create VPC Endpoint SSM We will create 3 interface endpoints required by the Session Manager:&#xA;Interface endpoints: com.amazonaws.region.ssm com.amazonaws.region.ec2messages com.amazonaws.region.ssmmessages You can refer to more here&#xA;Content: Create Endpoint ssm Create Endpoint ssmmessages Create Endpoint ec2messages</description>
+    <title>Create VPC Endpoint on AWS System Manager</title>
+    <link>https://ntvinh04.github.io/workshop-aws/3-lambda-api/3.2-api-gateway/3.2.1-websocket/</link>
+    <description>Recent content in Create VPC Endpoint on AWS System Manager</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate></lastBuildDate>

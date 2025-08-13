@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tạo S3 chứa hình ảnh :: AWS Workshop</title>
-    <link>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.1-creates3/2.1.2-creates3pic/index.html</link>
-    <description>Tạo S3 chứa hình ảnh Truy cập dịch vụ S3 Click Create bucket. Tại trang Create bucket. Tại mục Bucket name điền chatapp-web. Tại mục Block Public Access settings for this bucket bỏ chọn Block all public access và chọn I acknowledge that the current settings might result in this bucket and the objects within becoming public. Click Create bucket. Tiếp theo vào Permissions ở phần Bucket policy chọn edit Vào file code đã tải xuống tìm file bucketPolicyPic.json ở file backend/s3 và copy Tại phần Policy dán đoạn json đã copy vào sau đó chọn Save changes Thông tin&#xD;Sửa link S3 trong file json bucket và CORS trên nếu đặt tên khác workshop</description>
+    <title>Tạo S3 chứa hình ảnh on AWS System Manager</title>
+    <link>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.1-creates3/2.1.2-creates3pic/</link>
+    <description>Recent content in Tạo S3 chứa hình ảnh on AWS System Manager</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate></lastBuildDate>

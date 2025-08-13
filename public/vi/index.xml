@@ -1,47 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Session Management :: AWS Workshop</title>
-    <link>https://ntvinh04.github.io/workshop-aws/vi/index.html</link>
-    <description>AWS Serverless realtime webchat Tổng quan Đây là workshop về webchat serverless realtime trên AWS sử dụng S3 để lưu trữ website, lưu trữ hình ảnh do người dùng tải lên qua tin nhắn hoặc thay đổi avatar của người dùng. Cognito để xử lý việc đăng ký, đăng nhập và xác minh cho người dùng người dùng. Tiếp theo sẽ xây dựng api bằng Lambda và API Gateway để quản lý dữ liệu và sự tương tác của người dùng lên hệ thống. Sau đó sử dụng DynamoDB để lưu trữ dữ liệu do Lambda gửi lên trên hệ thống</description>
+    <title>Session Management on AWS System Manager</title>
+    <link>https://ntvinh04.github.io/workshop-aws/vi/</link>
+    <description>Recent content in Session Management on AWS System Manager</description>
     <generator>Hugo</generator>
     <language>vi</language>
-    <lastBuildDate>Mon, 11 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate></lastBuildDate>
     <atom:link href="https://ntvinh04.github.io/workshop-aws/vi/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Giới thiệu</title>
-      <link>https://ntvinh04.github.io/workshop-aws/vi/1-introduce/index.html</link>
-      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://ntvinh04.github.io/workshop-aws/vi/1-introduce/index.html</guid>
-      <description>Tổng quan Đây là workshop về webchat serverless realtime trên AWS sử dụng S3 để lưu trữ website, lưu trữ hình ảnh do người dùng tải lên qua tin nhắn hoặc thay đổi avatar của người dùng. Cognito để xử lý việc đăng ký, đăng nhập và xác minh cho người dùng người dùng. Tiếp theo sẽ xây dựng api bằng Lambda và API Gateway để quản lý dữ liệu và sự tương tác của người dùng lên hệ thống. Sau đó sử dụng DynamoDB để lưu trữ dữ liệu do Lambda gửi lên trên hệ thống</description>
-    </item>
-    <item>
-      <title>Các bước chuẩn bị</title>
-      <link>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/index.html</link>
-      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/index.html</guid>
-      <description>Nội dung Chuẩn bị S3 cho webchat Tạo IAM Role Tạo DynamoDB Tạo cognito</description>
-    </item>
-    <item>
-      <title>Tạo Lambda và API Gateway</title>
-      <link>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/index.html</link>
-      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/index.html</guid>
-      <description>Trong bước này, sẽ thực hiện tạo Lambda và API Gateway cho hệ thống.&#xA;Nội dung 3.1. Tạo Lambda 3.2. Tạo API Gateway</description>
-    </item>
-    <item>
-      <title>Tải code lên S3</title>
-      <link>https://ntvinh04.github.io/workshop-aws/vi/4-s3/index.html</link>
-      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://ntvinh04.github.io/workshop-aws/vi/4-s3/index.html</guid>
-      <description>Sau khi thực hiện toàn bộ các phần trên thì chỉ còn 1 bước là tải code lên bucket chứa website&#xA;Vào thư mục chứa code cd vào frontend và nhập npm install&#xA;Sau khi npm install xong thì nhập npm run build Sau khi chạy xong ta sẽ có file dist đây là file code frontend đã được tối giản đi để AWS sử dụng</description>
-    </item>
-    <item>
-      <title>Dọn dẹp tài nguyên  </title>
-      <link>https://ntvinh04.github.io/workshop-aws/vi/5-cleanup/index.html</link>
-      <pubDate>Thu, 01 Jan 1970 07:33:41 +0700</pubDate>
-      <guid>https://ntvinh04.github.io/workshop-aws/vi/5-cleanup/index.html</guid>
-      <description>Bây giờ là các bước cần tiến hành để xóa các tài nguyên đã tạo.&#xA;Xóa S3 Truy cập S3 Click chọn S3 bucket đã tạo Click Empty. Điền permanently delete, sau đó click Empty để tiến hành xóa object trong bucket. Click Exit. Sau khi xóa hết object trong bucket, click Delete Sau đó nhập tên bucket và click Delte bucket Xóa API Gateway Truy cập API Gateway.&#xA;Click chọn API đã tạo Click Delete Điền confirm và click Delete Xóa CloudWatch Truy cập CloudWatch.</description>
-    </item>
   </channel>
 </rss>

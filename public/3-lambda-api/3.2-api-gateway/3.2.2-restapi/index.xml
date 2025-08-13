@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Enable DNS hostnames :: AWS Workshop</title>
-    <link>https://ntvinh04.github.io/workshop-aws/3-lambda-api/3.2-api-gateway/3.2.2-restapi/index.html</link>
-    <description>Enable DNS hostnames on VPC. To create VPC Endpoint we will need to enable DNS hostnames feature on VPC. Go to VPC service management console&#xA;Click Your VPCs.&#xA;Select Lab VPC.&#xA;Click Actions.&#xA;Click Edit DNS hostnames.&#xA;Click Endpoint, then click Create Endpoint.&#xA;At the Edit DNS hostnames page. Click to select Enable. Click Save changes.</description>
+    <title>Enable DNS hostnames on AWS System Manager</title>
+    <link>https://ntvinh04.github.io/workshop-aws/3-lambda-api/3.2-api-gateway/3.2.2-restapi/</link>
+    <description>Recent content in Enable DNS hostnames on AWS System Manager</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate></lastBuildDate>

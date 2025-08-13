@@ -1,26 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tạo API Gateway :: AWS Workshop</title>
-    <link>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.2-api-gateway/index.html</link>
-    <description>Sau khi tạo xong các Lambda cho REST API và websocket thì tiếp theo là tạo các API tương tự để dùng cho Lambda&#xA;Nội dung: Tạo websocket Tạo REST API</description>
+    <title>Tạo API Gateway on AWS System Manager</title>
+    <link>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.2-api-gateway/</link>
+    <description>Recent content in Tạo API Gateway on AWS System Manager</description>
     <generator>Hugo</generator>
     <language>vi</language>
-    <lastBuildDate>Mon, 11 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate></lastBuildDate>
     <atom:link href="https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.2-api-gateway/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Tạo Websocket</title>
-      <link>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.2-api-gateway/3.2.1-websocket/index.html</link>
-      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.2-api-gateway/3.2.1-websocket/index.html</guid>
-      <description>Truy cập giao diện dịch vụ API Gateway Click create an API Ở Websocket API chọn Build Ở trường API name nhập chatapp&#xA;Ở trường Route selection expression nhập request.body.action sau đó chọn Next Chọn Add $connect route và Add $disconnect route để tạo route</description>
-    </item>
-    <item>
-      <title>Tạo REST API</title>
-      <link>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.2-api-gateway/3.2.2-restapi/index.html</link>
-      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.2-api-gateway/3.2.2-restapi/index.html</guid>
-      <description>Truy cập giao diện dịch vụ API Gateway Click create an API Ở REST API chọn Build Ở trường API name nhập chatapp-RestAPI sau đó chọn Create API Ở mục bên trái chọn Authorizers Click Create authorizer Ở trường Authorizer name nhập cognito Trường Authorizer type chọn cognito Trong Cognito user pool chọn user pool đã tạo Trong trường Token source nhập Authorization sau đó chọn Create authorizer Ở mục bên trái chọn Resources Chọn / ở dưới Create resource sau đó click vào Create resource Ở trường Resource name nhập user sau click Create resource Click vào create method ở /user vừa tạo Ở Method type chọn GET Bật Lambda proxy integration Ở Lambda function chọn function getUser sau đó click Create method Sau đó method GET chọn mục Method request chọn edit Ở Authorization chọn cognito đã tạo sau đó nhấn Save Click Enable CORS Chọn hết tất cả các ô và ấn Save Lặp lại các bước ở phần 3 để tạo các Rest API sau: send-message với Method POST, Lambda function sendMessage create-user với Method POST, Lambda function createUser me với Method GET, Lambda function me Từ resource /me tạo thêm 1 method PUT với function updateAvatar Sau khi tạo xong từ resource /me tạo thêm 1 resource /avatar Từ resource /avatar tạo method POST với Lambda upAvatar sau đó Enable CORS Với avatar thì không cần thêm Authorization Ghi chú&#xD;Lý do ở /me lại sử dụng method PUT còn /avatar lại sử dụng method POST là vì POST dùng để tạo cái chưa có còn PUT là để thay thế thứ đã có và /avatar là dùng để tạo url s3 để lưu trữ avatar do người dùng tạo lên còn PUT của /me là thay thế url vừa được tạo ra do /avatar vào trong table User</description>
-    </item>
   </channel>
 </rss>

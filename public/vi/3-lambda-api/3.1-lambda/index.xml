@@ -1,26 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tạo Lambda cho Web chat :: AWS Workshop</title>
-    <link>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.1-lambda/index.html</link>
-    <description>Ở đoạn này chúng ta sẽ tạo ra 9 Lambda cần thiết cho web chat hoạt động&#xA;Nội dung Tạo Lambda cho REST API Tạo Lambda cho websocket</description>
+    <title>Tạo Lambda cho Web chat on AWS System Manager</title>
+    <link>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.1-lambda/</link>
+    <description>Recent content in Tạo Lambda cho Web chat on AWS System Manager</description>
     <generator>Hugo</generator>
     <language>vi</language>
-    <lastBuildDate>Mon, 11 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate></lastBuildDate>
     <atom:link href="https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.1-lambda/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Lambda REST API</title>
-      <link>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.1-lambda/3.1.1-restapi/index.html</link>
-      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.1-lambda/3.1.1-restapi/index.html</guid>
-      <description>Truy cập vào trang dịch vụ Lambda. Click chọn Create function. Ở mục Function name nhập getMessage Runtime chọn Node.js 22.x hoặc Node.js 18.x đều được Architecture chọn x86_64 Ở mục Permissions mở mục Change default execution role chọn Use an existing role ở phần Execution role và chọn role chatapp-role đã tạo lúc trước Click create function để tạo function Lambda Sau khi tạo xong Lambda getMessage thì sẽ được chuyển đến trang function getMessage Sau đó kéo xuống Code source và vào thư mục backend/lamda và copy code của file getMessage.mjs và dán vào Code source +Click vào deloy để lưu code Ghi chú&#xD;Thực hiện tương tự cho các Lambda sau : createUser, getUser, me, updateAvatar</description>
-    </item>
-    <item>
-      <title>Lambda Websocket</title>
-      <link>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.1-lambda/3.1.2-websocket/index.html</link>
-      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.1-lambda/3.1.2-websocket/index.html</guid>
-      <description>Truy cập vào trang dịch vụ Lambda. Click chọn Create function. Ở mục Function name nhập connect Runtime chọn Node.js 22.x hoặc Node.js 18.x đều được Architecture chọn x86_64 Ở mục Permissions mở mục Change default execution role chọn Use an existing role ở phần Execution role và chọn role chatapp-role đã tạo lúc trước Click create function để tạo function Lambda Sau khi tạo xong Lambda connect thì sẽ được chuyển đến trang function connect Sau đó vào thư mục backend/socket tìm thư mục connect và cd sau đó dán đoạn npm vào để install thư viện npm install jsonwebtoken jwk-to-pem aws-sdk Sau khi làm xong thì zip thư mục connect lại Thông tin&#xD;Khi zip thì đừng zip thư mục ở bên ngoài mà nên zip toàn bộ file trong thư mục vì nếu zip thư mục bên ngoài thì khi deloy lên lambda sẽ bị lỗi vì không dò được file index.js khiên code không hoạt động</description>
-    </item>
   </channel>
 </rss>

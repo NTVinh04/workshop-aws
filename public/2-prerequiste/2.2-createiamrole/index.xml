@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Create IAM Role :: AWS Workshop</title>
-    <link>https://ntvinh04.github.io/workshop-aws/2-prerequiste/2.2-createiamrole/index.html</link>
-    <description>Create IAM Role In this step, we will proceed to create IAM Role. In this IAM Role, the policy AmazonSSMManagedInstanceCore will be assigned, this is the policy that allows the EC2 server to communicate with the Session Manager.&#xA;Go to IAM service administration interface In the left navigation bar, click Roles. Click Create role.</description>
+    <title>Create IAM Role on AWS System Manager</title>
+    <link>https://ntvinh04.github.io/workshop-aws/2-prerequiste/2.2-createiamrole/</link>
+    <description>Recent content in Create IAM Role on AWS System Manager</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate></lastBuildDate>

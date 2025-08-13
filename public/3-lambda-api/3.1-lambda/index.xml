@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Connect to Public Instance :: AWS Workshop</title>
-    <link>https://ntvinh04.github.io/workshop-aws/3-lambda-api/3.1-lambda/index.html</link>
-    <description>Go to EC2 service management console. Click on Public Linux Instance. Click Actions. Click Security. Click Modify IAM role. At the Modify IAM role page. Click to select SSM-Role. Click Save. Note&#xD;You will need to wait about 10 minutes before performing the next step. This time our EC2 instance will automatically register with the Session Manager.</description>
+    <title>Connect to Public Instance on AWS System Manager</title>
+    <link>https://ntvinh04.github.io/workshop-aws/3-lambda-api/3.1-lambda/</link>
+    <description>Recent content in Connect to Public Instance on AWS System Manager</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate></lastBuildDate>

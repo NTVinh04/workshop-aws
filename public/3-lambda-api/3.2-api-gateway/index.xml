@@ -1,26 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Connect to Private instance :: AWS Workshop</title>
-    <link>https://ntvinh04.github.io/workshop-aws/3-lambda-api/3.2-api-gateway/index.html</link>
-    <description>For Windows instance located in private subnet, there is no public IP, no internet gateway so it cannot go out internet.&#xA;With this type of instance, the traditional way is to use Bastion host technique which is expensive and laborious, but here we will use Session Manager with this type.&#xA;Basically, the private instance still has to open the TCP 443 port to System Manager, but we don’t want to allow connection go out to the internet, but only in its VPC, to enhance our security posture.&#xA;To do that, we have to include the System Manager endpoint in the VPC, that is, using the VPC interface endpoint:</description>
+    <title>Connect to Private instance on AWS System Manager</title>
+    <link>https://ntvinh04.github.io/workshop-aws/3-lambda-api/3.2-api-gateway/</link>
+    <description>Recent content in Connect to Private instance on AWS System Manager</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 11 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate></lastBuildDate>
     <atom:link href="https://ntvinh04.github.io/workshop-aws/3-lambda-api/3.2-api-gateway/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Enable DNS hostnames</title>
-      <link>https://ntvinh04.github.io/workshop-aws/3-lambda-api/3.2-api-gateway/3.2.2-restapi/index.html</link>
-      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://ntvinh04.github.io/workshop-aws/3-lambda-api/3.2-api-gateway/3.2.2-restapi/index.html</guid>
-      <description>Enable DNS hostnames on VPC. To create VPC Endpoint we will need to enable DNS hostnames feature on VPC. Go to VPC service management console&#xA;Click Your VPCs.&#xA;Select Lab VPC.&#xA;Click Actions.&#xA;Click Edit DNS hostnames.&#xA;Click Endpoint, then click Create Endpoint.&#xA;At the Edit DNS hostnames page. Click to select Enable. Click Save changes.</description>
-    </item>
-    <item>
-      <title>Create VPC Endpoint</title>
-      <link>https://ntvinh04.github.io/workshop-aws/3-lambda-api/3.2-api-gateway/3.2.1-websocket/index.html</link>
-      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://ntvinh04.github.io/workshop-aws/3-lambda-api/3.2-api-gateway/3.2.1-websocket/index.html</guid>
-      <description>Create VPC Endpoint SSM We will create 3 interface endpoints required by the Session Manager:&#xA;Interface endpoints: com.amazonaws.region.ssm com.amazonaws.region.ec2messages com.amazonaws.region.ssmmessages You can refer to more here&#xA;Content: Create Endpoint ssm Create Endpoint ssmmessages Create Endpoint ec2messages</description>
-    </item>
   </channel>
 </rss>
