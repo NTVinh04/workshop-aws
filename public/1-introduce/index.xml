@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Introduction on AWS workshop</title>
-    <link>https://ntvinh04.github.io/workshop-aws/1-introduce/</link>
-    <description>Recent content in Introduction on AWS workshop</description>
+    <title>Introduction :: AWS Workshop</title>
+    <link>https://ntvinh04.github.io/workshop-aws/1-introduce/index.html</link>
+    <description>Session Manager is a function within the AWS System Manager service, SSM provides verifiable and secure version management without opening incoming ports, without Bastion Host or SSH key management. Session Manager also makes it easy to comply with corporate policies that require controlled access to instances, strict security practices, and fully auditable logs with instance access details, while still providing end-users with one-click cross-platform access to your managed instances.&#xA;By using Session Manager, you get the following advantages that traditional methods do not have:</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate></lastBuildDate>

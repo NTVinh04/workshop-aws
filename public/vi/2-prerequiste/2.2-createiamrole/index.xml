@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tạo IAM Role on AWS workshop</title>
-    <link>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.2-createiamrole/</link>
-    <description>Recent content in Tạo IAM Role on AWS workshop</description>
+    <title>Tạo IAM Role :: AWS Workshop</title>
+    <link>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.2-createiamrole/index.html</link>
+    <description>Tạo IAM Role Trong bước này sẽ tiến hành tạo IAM Role dành cho các chức năng của lambda. Trong IAM Role này sẽ được gán cho các policy với chức năng cho phép Lambda tạo và ghi chú lại log trên CloudWatch để kiểm tra nếu có lỗi trong quá trình làm. Tiếp theo là chức năng cho phép Lambda đọc và ghi dữ liệu vào 2 bảng DynamoDB sẽ tạo sắp tới là User và Messages. Kế tiếp là cho phép Lambda upload file và trong S3. Và cuối cùng là cho phép Lambda gửi tin nhắn hoặc đóng kết nối Websocket thông qua API Gateway</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate></lastBuildDate>

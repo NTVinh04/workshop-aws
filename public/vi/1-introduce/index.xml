@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Giới thiệu on AWS workshop</title>
-    <link>https://ntvinh04.github.io/workshop-aws/vi/1-introduce/</link>
-    <description>Recent content in Giới thiệu on AWS workshop</description>
+    <title>Giới thiệu :: AWS Workshop</title>
+    <link>https://ntvinh04.github.io/workshop-aws/vi/1-introduce/index.html</link>
+    <description>Tổng quan Đây là workshop về webchat serverless realtime trên AWS sử dụng S3 để lưu trữ website, lưu trữ hình ảnh do người dùng tải lên qua tin nhắn hoặc thay đổi avatar của người dùng. Cognito để xử lý việc đăng ký, đăng nhập và xác minh cho người dùng người dùng. Tiếp theo sẽ xây dựng api bằng Lambda và API Gateway để quản lý dữ liệu và sự tương tác của người dùng lên hệ thống. Sau đó sử dụng DynamoDB để lưu trữ dữ liệu do Lambda gửi lên trên hệ thống</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate></lastBuildDate>

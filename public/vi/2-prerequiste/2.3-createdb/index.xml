@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tạo DynamoDB on AWS workshop</title>
-    <link>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.3-createdb/</link>
-    <description>Recent content in Tạo DynamoDB on AWS workshop</description>
+    <title>Tạo DynamoDB :: AWS Workshop</title>
+    <link>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.3-createdb/index.html</link>
+    <description>Tạo Table User và Messages Trong bước này sẽ tiến hành tạo 2 table là User và Messages để lưu trữ thông tin người dùng lấy từ cognito và để lưu trữ tin nhắn do người dùng gửi lên&#xA;Truy cập vào dịch vụ DynamoDB&#xA;Ở trang DynamoDB click Create table.&#xA;Ở mục Table name nhập User Ở mục Partition Key nhập userId Sau đó click Create Table Tiếp theo là table Messages Ở mục Table name nhập Messages Ở mục Partition Key nhập conversationId Ở mục Sort Key nhập timestamp Sau đó click Create Table Sau khi tạo xong chờ cho tới khi Status của 2 table đều là Active là hoàn thành.</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate></lastBuildDate>

@@ -1,681 +1,316 @@
 <!DOCTYPE html>
-<html lang="vi" class="js csstransforms3d">
+<html lang="vi" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.148.2">
-    <meta name="description" content="">
-<meta name="author" content="journeyoftheaverageguy@gmail.com">
-
-    <link rel="icon" href="/workshop-aws/images/favicon.png" type="image/png">
-
-    <title>Tạo IAM Role :: AWS workshop</title>
-
-    
-    <link href="/workshop-aws/css/nucleus.css?1755106062" rel="stylesheet">
-    <link href="/workshop-aws/css/fontawesome-all.min.css?1755106062" rel="stylesheet">
-    <link href="/workshop-aws/css/hybrid.css?1755106062" rel="stylesheet">
-    <link href="/workshop-aws/css/featherlight.min.css?1755106062" rel="stylesheet">
-    <link href="/workshop-aws/css/perfect-scrollbar.min.css?1755106062" rel="stylesheet">
-    <link href="/workshop-aws/css/auto-complete.css?1755106062" rel="stylesheet">
-    <link href="/workshop-aws/css/atom-one-dark-reasonable.css?1755106062" rel="stylesheet">
-    <link href="/workshop-aws/css/theme.css?1755106062" rel="stylesheet">
-    <link href="/workshop-aws/css/hugo-theme.css?1755106062" rel="stylesheet">
-    
-    <link href="/workshop-aws/css/theme-workshop.css?1755106062" rel="stylesheet">
-    
-    
-
-    <script src="/workshop-aws/js/jquery-3.3.1.min.js?1755106062"></script>
-
-    <style>
-      :root #header + #content > #left > #rlblock_left{
-          display:none !important;
+    <meta name="generator" content="Relearn 8.0.0+9803d5122ebb3276acea823f476e9eb44f607862">
+    <meta name="description" content="Tạo IAM Role Trong bước này sẽ tiến hành tạo IAM Role dành cho các chức năng của lambda. Trong IAM Role này sẽ được gán cho các policy với chức năng cho phép Lambda tạo và ghi chú lại log trên CloudWatch để kiểm tra nếu có lỗi trong quá trình làm. Tiếp theo là chức năng cho phép Lambda đọc và ghi dữ liệu vào 2 bảng DynamoDB sẽ tạo sắp tới là User và Messages. Kế tiếp là cho phép Lambda upload file và trong S3. Và cuối cùng là cho phép Lambda gửi tin nhắn hoặc đóng kết nối Websocket thông qua API Gateway">
+    <meta name="author" content="journeyoftheaverageguy@gmail.com">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tạo IAM Role :: AWS Workshop">
+    <meta name="twitter:description" content="Tạo IAM Role Trong bước này sẽ tiến hành tạo IAM Role dành cho các chức năng của lambda. Trong IAM Role này sẽ được gán cho các policy với chức năng cho phép Lambda tạo và ghi chú lại log trên CloudWatch để kiểm tra nếu có lỗi trong quá trình làm. Tiếp theo là chức năng cho phép Lambda đọc và ghi dữ liệu vào 2 bảng DynamoDB sẽ tạo sắp tới là User và Messages. Kế tiếp là cho phép Lambda upload file và trong S3. Và cuối cùng là cho phép Lambda gửi tin nhắn hoặc đóng kết nối Websocket thông qua API Gateway">
+    <meta property="og:url" content="https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.2-createiamrole/index.html">
+    <meta property="og:site_name" content="AWS Workshop">
+    <meta property="og:title" content="Tạo IAM Role :: AWS Workshop">
+    <meta property="og:description" content="Tạo IAM Role Trong bước này sẽ tiến hành tạo IAM Role dành cho các chức năng của lambda. Trong IAM Role này sẽ được gán cho các policy với chức năng cho phép Lambda tạo và ghi chú lại log trên CloudWatch để kiểm tra nếu có lỗi trong quá trình làm. Tiếp theo là chức năng cho phép Lambda đọc và ghi dữ liệu vào 2 bảng DynamoDB sẽ tạo sắp tới là User và Messages. Kế tiếp là cho phép Lambda upload file và trong S3. Và cuối cùng là cho phép Lambda gửi tin nhắn hoặc đóng kết nối Websocket thông qua API Gateway">
+    <meta property="og:locale" content="vi">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Tạo IAM Role :: AWS Workshop">
+    <meta itemprop="description" content="Tạo IAM Role Trong bước này sẽ tiến hành tạo IAM Role dành cho các chức năng của lambda. Trong IAM Role này sẽ được gán cho các policy với chức năng cho phép Lambda tạo và ghi chú lại log trên CloudWatch để kiểm tra nếu có lỗi trong quá trình làm. Tiếp theo là chức năng cho phép Lambda đọc và ghi dữ liệu vào 2 bảng DynamoDB sẽ tạo sắp tới là User và Messages. Kế tiếp là cho phép Lambda upload file và trong S3. Và cuối cùng là cho phép Lambda gửi tin nhắn hoặc đóng kết nối Websocket thông qua API Gateway">
+    <meta itemprop="datePublished" content="2025-08-11T00:00:00+00:00">
+    <meta itemprop="dateModified" content="2025-08-11T00:00:00+00:00">
+    <meta itemprop="wordCount" content="235">
+    <title>Tạo IAM Role :: AWS Workshop</title>
+    <link href="https://ntvinh04.github.io/workshop-aws/2-prerequiste/2.2-createiamrole/index.html" rel="alternate" hreflang="x-default">
+    <link href="https://ntvinh04.github.io/workshop-aws/2-prerequiste/2.2-createiamrole/index.html" rel="alternate" hreflang="en">
+    <link href="https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.2-createiamrole/index.html" rel="alternate" hreflang="vi">
+    <link href="/workshop-aws/vi/2-prerequiste/2.2-createiamrole/index.xml" rel="alternate" type="application/rss+xml" title="Tạo IAM Role :: AWS Workshop">
+    <link href="/workshop-aws/images/favicon.png?1755107199" rel="icon" type="image/png">
+    <link href="/workshop-aws/css/auto-complete/auto-complete.min.css?1755107199" rel="stylesheet">
+    <script src="/workshop-aws/js/auto-complete/auto-complete.min.js?1755107199" defer></script>
+    <script src="/workshop-aws/js/search-lunr.min.js?1755107199" defer></script>
+    <script src="/workshop-aws/js/search.min.js?1755107199" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/workshop-aws/searchindex.vi.js?1755107199";
+    </script>
+    <script src="/workshop-aws/js/lunr/lunr.min.js?1755107199" defer></script>
+    <script src="/workshop-aws/js/lunr/lunr.stemmer.support.min.js?1755107199" defer></script>
+    <script src="/workshop-aws/js/lunr/lunr.multi.min.js?1755107199" defer></script>
+    <script src="/workshop-aws/js/lunr/lunr.vi.min.js?1755107199" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['vi'];
+    </script>
+    <link href="/workshop-aws/fonts/fontawesome/css/fontawesome-all.min.css?1755107199" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/workshop-aws/fonts/fontawesome/css/fontawesome-all.min.css?1755107199" rel="stylesheet"></noscript>
+    <link href="/workshop-aws/css/perfect-scrollbar/perfect-scrollbar.min.css?1755107199" rel="stylesheet">
+    <link href="/workshop-aws/css/theme.min.css?1755107199" rel="stylesheet">
+    <link href="/workshop-aws/css/format-html.min.css?1755107199" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/vi\/2-prerequiste\/2.2-createiamrole\/index.html';
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/ntvinh04.github.io\/workshop-aws';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Sao chép vào bảng tạm`;
+      window.T_Copied_to_clipboard = `Sao chép vào bảng tạm!`;
+      window.T_Copy_link_to_clipboard = `Sao chép nối kết vào bảng tạm`;
+      window.T_Link_copied_to_clipboard = `Liên kết được sao chép vào bảng tạm!`;
+      window.T_Reset_view = `Đặt lại dạng xem`;
+      window.T_View_reset = `Xem đặt lại!`;
+      window.T_No_results_found = `Không tìm thấy kết quả nào cho "{0}"`;
+      window.T_N_results_found = `{1} kết quả được tìm thấy cho "{0}"`;
+      // variant stuff
+      window.relearn.themevariants = [ 'relearn-bright' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
       }
-      
-    </style>
-    
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
   </head>
-  <body class="" data-url="/workshop-aws/vi/2-prerequiste/2.2-createiamrole/">
-    <nav id="sidebar" class="showVisitedLinks">
+  <body class="mobile-support html" data-url="/workshop-aws/vi/2-prerequiste/2.2-createiamrole/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Mục lục (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#tao-iam-role">Tạo IAM Role</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/workshop-aws/vi/index.html"><span itemprop="name">Session Management</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/workshop-aws/vi/2-prerequiste/index.html"><span itemprop="name">Các bước chuẩn bị</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Tạo IAM Role</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/workshop-aws/vi/2-prerequiste/2.1-creates3/2.1.2-creates3pic/index.html" title="Tạo S3 chứa hình ảnh (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/workshop-aws/vi/2-prerequiste/2.3-createdb/index.html" title="Tạo DynamoDB (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Nội dung khác"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 2-prerequiste" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
 
+<h1 id="tạo-iam-role">Tạo IAM Role</h1>
 
+<h3 id="tao-iam-role">Tạo IAM Role</h3>
+<p>Trong bước này sẽ tiến hành tạo IAM Role dành cho các chức năng của lambda. Trong IAM Role này sẽ được gán cho các policy với chức năng cho phép <strong>Lambda</strong> tạo và ghi chú lại log trên <strong>CloudWatch</strong> để kiểm tra nếu có lỗi trong quá trình làm. Tiếp theo là chức năng cho phép <strong>Lambda</strong> đọc và ghi dữ liệu vào 2 bảng <strong>DynamoDB</strong> sẽ tạo sắp tới là <strong>User</strong> và <strong>Messages</strong>. Kế tiếp là cho phép <strong>Lambda</strong> upload file và trong <strong>S3</strong>. Và cuối cùng là cho phép <strong>Lambda</strong> gửi tin nhắn hoặc đóng kết nối Websocket thông qua <strong>API Gateway</strong></p>
+<ol>
+<li>
+<p>Truy cập vào dịch vụ <a href="https://console.aws.amazon.com/iamv2/" rel="external" target="_blank">IAM</a></p>
+</li>
+<li>
+<p>Ở thanh điều hướng bên trái, click  <strong>Policies</strong>.<br>
+<a href="#R-image-308ea6d9eefb212f88e327454d80dd79" class="lightbox-link"><img alt="policy" class="lazy lightbox figure-image" loading="lazy" src="/images/2.prerequisite/013.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-308ea6d9eefb212f88e327454d80dd79"><img alt="policy" class="lazy lightbox lightbox-image" loading="lazy" src="/images/2.prerequisite/013.png"></a></p>
+</li>
+<li>
+<p>Click <strong>Create Policy</strong>.<br>
+<a href="#R-image-0f37bca560724e3970646cc068b1c097" class="lightbox-link"><img alt="policy1" class="lazy lightbox figure-image" loading="lazy" src="/images/2.prerequisite/014.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0f37bca560724e3970646cc068b1c097"><img alt="policy1" class="lazy lightbox lightbox-image" loading="lazy" src="/images/2.prerequisite/014.png"></a></p>
+</li>
+<li>
+<p>Ở phần <strong>Policy editor</strong> chọn <strong>JSON</strong></p>
+</li>
+</ol>
+<ul>
+<li>Vào file code đã tải vào thư mục <strong>backend/lambda</strong> mở file <strong>policyLambda.json</strong> copy đoạn json đó và dán vào phần <strong>Policy editor</strong> sau đó chọn next.<br>
+<a href="#R-image-33d5c8457bfcf960f2fa814ab2d3cf50" class="lightbox-link"><img alt="createpolicy" class="lazy lightbox figure-image" loading="lazy" src="/images/2.prerequisite/015.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-33d5c8457bfcf960f2fa814ab2d3cf50"><img alt="createpolicy" class="lazy lightbox lightbox-image" loading="lazy" src="/images/2.prerequisite/015.png"></a></li>
+</ul>
+<ol start="5">
+<li>Trong ô Policy name, điền tên cho policy là <code>chatapp</code> và kiểm tra lại phần <strong>Permissions defined in this policy</strong> xem đã đủ policy chưa.
+<a href="#R-image-07020687fcc8a27fc8b00026f13e112e" class="lightbox-link"><img alt="createpolicy1" class="lazy lightbox figure-image" loading="lazy" src="/images/2.prerequisite/016.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-07020687fcc8a27fc8b00026f13e112e"><img alt="createpolicy1" class="lazy lightbox lightbox-image" loading="lazy" src="/images/2.prerequisite/016.png"></a></li>
+</ol>
+<ul>
+<li>Click <strong>Create policy</strong> để tạo policy
+<a href="#R-image-ef79c5134671a1f5474783a38d2c6c9d" class="lightbox-link"><img alt="createpolicy2" class="lazy lightbox figure-image" loading="lazy" src="/images/2.prerequisite/017.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ef79c5134671a1f5474783a38d2c6c9d"><img alt="createpolicy2" class="lazy lightbox lightbox-image" loading="lazy" src="/images/2.prerequisite/017.png"></a></li>
+</ul>
+<ol start="6">
+<li>Ở thanh điều hướng bên trái, click  <strong>Roles</strong>.
+<a href="#R-image-79481d4935e9a8bbf357ed46a8a80448" class="lightbox-link"><img alt="role" class="lazy lightbox figure-image" loading="lazy" src="/images/2.prerequisite/018.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-79481d4935e9a8bbf357ed46a8a80448"><img alt="role" class="lazy lightbox lightbox-image" loading="lazy" src="/images/2.prerequisite/018.png"></a></li>
+</ol>
+<ul>
+<li>Click <strong>Create role</strong></li>
+<li>Ở mục <strong>Service or use case</strong> của <strong>Use case</strong> chọn <strong>Lambda</strong></li>
+<li>Click <strong>Next</strong>
+<a href="#R-image-d830ad5a5320d46ff35fd6a514aae87f" class="lightbox-link"><img alt="createrole" class="lazy lightbox figure-image" loading="lazy" src="/images/2.prerequisite/019.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d830ad5a5320d46ff35fd6a514aae87f"><img alt="createrole" class="lazy lightbox lightbox-image" loading="lazy" src="/images/2.prerequisite/019.png"></a></li>
+<li>Chọn Policy đã tạo ở trên và ấn <strong>Next</strong>
+<a href="#R-image-1bfae1b785fef2f8ee4d12287aca8646" class="lightbox-link"><img alt="createrole1" class="lazy lightbox figure-image" loading="lazy" src="/images/2.prerequisite/020.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1bfae1b785fef2f8ee4d12287aca8646"><img alt="createrole1" class="lazy lightbox lightbox-image" loading="lazy" src="/images/2.prerequisite/020.png"></a></li>
+<li>Ở <strong>Role name</strong> nhập <code>chatapp-role</code> sau đó kiểm tra lại và ấn <strong>Create role</strong>
+<a href="#R-image-862aa86bd50a8e5b4df1c65dc9f6716f" class="lightbox-link"><img alt="createrole2" class="lazy lightbox figure-image" loading="lazy" src="/images/2.prerequisite/021.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-862aa86bd50a8e5b4df1c65dc9f6716f"><img alt="createrole2" class="lazy lightbox lightbox-image" loading="lazy" src="/images/2.prerequisite/021.png"></a>
+<a href="#R-image-58bc753e57e608c347917671ee45251f" class="lightbox-link"><img alt="createrole3" class="lazy lightbox figure-image" loading="lazy" src="/images/2.prerequisite/022.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-58bc753e57e608c347917671ee45251f"><img alt="createrole3" class="lazy lightbox lightbox-image" loading="lazy" src="/images/2.prerequisite/022.png"></a>
+<a href="#R-image-cf327584c69b6cb8ee41804c10a289e8" class="lightbox-link"><img alt="createrole4" class="lazy lightbox figure-image" loading="lazy" src="/images/2.prerequisite/023.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cf327584c69b6cb8ee41804c10a289e8"><img alt="createrole4" class="lazy lightbox lightbox-image" loading="lazy" src="/images/2.prerequisite/023.png"></a></li>
+</ul>
 
-  <div id="header-wrapper">
-    <div id="header">
-      <a id="logo" href="/">
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 11 thg 8, 2025
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a id="logo" href="/">
 
 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f90;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg>
 
 </a>
 
-    </div>
-    
-        <div class="searchbox">
-    <label for="search-by"><i class="fas fa-search"></i></label>
-    <input data-search-input id="search-by" type="search" placeholder="Search...">
-    <span data-search-clear=""><i class="fas fa-times"></i></span>
-</div>
-
-<script type="text/javascript" src="/workshop-aws/js/lunr.min.js?1755106062"></script>
-<script type="text/javascript" src="/workshop-aws/js/auto-complete.js?1755106062"></script>
-<script type="text/javascript">
-    
-        var baseurl = "https:\/\/ntvinh04.github.io\/workshop-aws\/\/vi";
-    
-</script>
-<script type="text/javascript" src="/workshop-aws/js/search.js?1755106062"></script>
-
-    
-  </div>
-
-    <div class="highlightable">
-    <ul class="topics">
-
-        
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/workshop-aws/vi/1-introduce/" title="Giới thiệu" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/workshop-aws/vi/1-introduce/">
-           <b> 1. </b> Giới thiệu
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/workshop-aws/vi/2-prerequiste/" title="Các bước chuẩn bị" class="dd-item 
-        parent
-        
-        
-        ">
-      <a href="/workshop-aws/vi/2-prerequiste/">
-           <b> 2. </b> Các bước chuẩn bị
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/workshop-aws/vi/2-prerequiste/2.1-creates3/" title="Tạo S3" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/workshop-aws/vi/2-prerequiste/2.1-creates3/">
-           <b> 2.1 </b> Tạo S3
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/workshop-aws/vi/2-prerequiste/2.1-creates3/2.1.1-creates3web/" title="Tạo S3 chứa website" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/workshop-aws/vi/2-prerequiste/2.1-creates3/2.1.1-creates3web/">
-           <b> 2.1.1 </b> Tạo S3 chứa website
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/workshop-aws/vi/2-prerequiste/2.1-creates3/2.1.2-creates3pic/" title="Tạo S3 chứa hình ảnh" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/workshop-aws/vi/2-prerequiste/2.1-creates3/2.1.2-creates3pic/">
-           <b> 2.1.2 </b> Tạo S3 chứa hình ảnh
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/workshop-aws/vi/2-prerequiste/2.2-createiamrole/" title="Tạo IAM Role" class="dd-item 
-        
-        active
-        
-        ">
-      <a href="/workshop-aws/vi/2-prerequiste/2.2-createiamrole/">
-           <b> 2.2 </b> Tạo IAM Role
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/workshop-aws/vi/2-prerequiste/2.3-createdb/" title="Tạo DynamoDB" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/workshop-aws/vi/2-prerequiste/2.3-createdb/">
-           <b> 2.3 </b> Tạo DynamoDB
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/workshop-aws/vi/2-prerequiste/2.4-createcog/" title="Tạo Cognito" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/workshop-aws/vi/2-prerequiste/2.4-createcog/">
-           <b> 2.4 </b> Tạo Cognito
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/workshop-aws/vi/3-lambda-api/" title="Tạo Lambda và API Gateway" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/workshop-aws/vi/3-lambda-api/">
-           <b> 3. </b> Tạo Lambda và API Gateway
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/workshop-aws/vi/3-lambda-api/3.1-lambda/" title="Tạo Lambda cho Web chat" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/workshop-aws/vi/3-lambda-api/3.1-lambda/">
-           <b> 3.1. </b> Tạo Lambda cho Web chat
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/workshop-aws/vi/3-lambda-api/3.1-lambda/3.1.1-restapi/" title="Lambda REST API" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/workshop-aws/vi/3-lambda-api/3.1-lambda/3.1.1-restapi/">
-           <b> 3.1.1 </b> Lambda REST API
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/workshop-aws/vi/3-lambda-api/3.1-lambda/3.1.2-websocket/" title="Lambda Websocket" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/workshop-aws/vi/3-lambda-api/3.1-lambda/3.1.2-websocket/">
-           <b> 3.1.2 </b> Lambda Websocket
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/workshop-aws/vi/3-lambda-api/3.2-api-gateway/" title="Tạo API Gateway" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/workshop-aws/vi/3-lambda-api/3.2-api-gateway/">
-           <b> 3.2. </b> Tạo API Gateway
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/workshop-aws/vi/3-lambda-api/3.2-api-gateway/3.2.1-websocket/" title="Tạo Websocket" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/workshop-aws/vi/3-lambda-api/3.2-api-gateway/3.2.1-websocket/">
-           <b> 3.2.1 </b> Tạo Websocket
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/workshop-aws/vi/3-lambda-api/3.2-api-gateway/3.2.2-restapi/" title="Tạo REST API" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/workshop-aws/vi/3-lambda-api/3.2-api-gateway/3.2.2-restapi/">
-           <b> 3.2.2 </b> Tạo REST API
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/workshop-aws/vi/4-s3/" title="Tải code lên S3" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/workshop-aws/vi/4-s3/">
-           <b> 4. </b> Tải code lên S3
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/workshop-aws/vi/5-cleanup/" title="Dọn dẹp tài nguyên  " class="dd-item 
-        
-        
-        
-        ">
-      <a href="/workshop-aws/vi/5-cleanup/">
-          <b>5. </b>Dọn dẹp tài nguyên  
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-         
-    </ul>
-
-    
-    
-      <section id="shortcuts">
-        <h3>More</h3>
-        <ul>
-          
-              <li> 
-                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj/"><i class='fab fa-facebook'></i> AWS Study Group</a>
-              </li>
-          
-        </ul>
-      </section>
-    
-
-    
-    <section id="prefooter">
-      <hr/>
-      <ul>
-      
-        <li>
-          <a class="padding">
-            <i class="fas fa-language fa-fw"></i>
-          <div class="select-style">
-            <select id="select-language" onchange="location = this.value;">
-          
-          
-          
-              
-              
-                  
-                    
-                    
-                      <option id="en" value="https://ntvinh04.github.io/workshop-aws/2-prerequiste/2.2-createiamrole/">English</option>
-                    
-                  
-              
-                  
-              
-          
-              
-              
-                  
-              
-                  
-                    
-                    
-                      <option id="vi" value="https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.2-createiamrole/" selected>Tiếng Việt</option>
-                    
-                  
-              
-          
-        </select>
-        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
-          <g>
-            <g id="arrow-drop-down">
-              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
-            </g>
-          </g>
-        </svg>
         </div>
-        </a>
-        </li>
-      
-      
-      
-        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
-      
-      </ul>
-    </section>
-    
-    <section id="footer">
-      <left>
+        <search><form action="/workshop-aws/vi/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Tìm kiếm (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Tìm kiếm</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Tìm kiếm...">
+            <button class="search-clear" type="button" data-search-clear="" title="Xóa tìm kiếm"><i class="fas fa-times" title="Xóa tìm kiếm"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/workshop-aws/vi/index.html"><a class="padding" href="/workshop-aws/vi/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/workshop-aws/vi/1-introduce/index.html"><a class="padding" href="/workshop-aws/vi/1-introduce/index.html"> <b> 1. </b> Giới thiệu<i class="fa-fw fas fa-check read-icon"></i></a></li>
+            <li class="parent " data-nav-id="/workshop-aws/vi/2-prerequiste/index.html"><a class="padding" href="/workshop-aws/vi/2-prerequiste/index.html"> <b> 2. </b> Các bước chuẩn bị<i class="fa-fw fas fa-check read-icon"></i></a><ul id="R-subsections-447525a47cd1507dd1e2574d6dc5d168" class="collapsible-menu">
+            <li class="alwaysopen " data-nav-id="/workshop-aws/vi/2-prerequiste/2.1-creates3/index.html"><a class="padding" href="/workshop-aws/vi/2-prerequiste/2.1-creates3/index.html"> <b> 2.1 </b> Tạo S3<i class="fa-fw fas fa-check read-icon"></i></a><ul id="R-subsections-f0545eaa9abd26abf3156c3ad7ab8407" class="collapsible-menu"></ul></li>
+            <li class="active " data-nav-id="/workshop-aws/vi/2-prerequiste/2.2-createiamrole/index.html"><a class="padding" href="/workshop-aws/vi/2-prerequiste/2.2-createiamrole/index.html"> <b> 2.2 </b> Tạo IAM Role<i class="fa-fw fas fa-check read-icon"></i></a></li>
+            <li class="" data-nav-id="/workshop-aws/vi/2-prerequiste/2.3-createdb/index.html"><a class="padding" href="/workshop-aws/vi/2-prerequiste/2.3-createdb/index.html"> <b> 2.3 </b> Tạo DynamoDB<i class="fa-fw fas fa-check read-icon"></i></a></li>
+            <li class="" data-nav-id="/workshop-aws/vi/2-prerequiste/2.4-createcog/index.html"><a class="padding" href="/workshop-aws/vi/2-prerequiste/2.4-createcog/index.html"> <b> 2.4 </b> Tạo Cognito<i class="fa-fw fas fa-check read-icon"></i></a></li></ul></li>
+            <li class="" data-nav-id="/workshop-aws/vi/3-lambda-api/index.html"><a class="padding" href="/workshop-aws/vi/3-lambda-api/index.html"> <b> 3. </b> Tạo Lambda và API Gateway<i class="fa-fw fas fa-check read-icon"></i></a><ul id="R-subsections-a81d0625425feac75d60aa80f2285b06" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/workshop-aws/vi/4-s3/index.html"><a class="padding" href="/workshop-aws/vi/4-s3/index.html"> <b> 4. </b> Tải code lên S3<i class="fa-fw fas fa-check read-icon"></i></a></li>
+            <li class="" data-nav-id="/workshop-aws/vi/5-cleanup/index.html"><a class="padding" href="/workshop-aws/vi/5-cleanup/index.html"><b>5. </b>Dọn dẹp tài nguyên  <i class="fa-fw fas fa-check read-icon"></i></a></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <div class="nav-title padding">Nội dung khác</div>
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="https://www.facebook.com/groups/awsstudygroupfcj/"><a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj/" rel="external" target="_blank"><i class='fab fa-facebook'></i> AWS Study Group<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+			<li class="R-languageswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-language"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-language">Ngôn ngữ</label>
+                  <select id="R-select-language">
+                    <option id="R-select-language-en" value="en" data-url="/workshop-aws/2-prerequiste/2.2-createiamrole/index.html" lang="en">English</option>
+                    <option id="R-select-language-vi" value="vi" data-url="/workshop-aws/vi/2-prerequiste/2.2-createiamrole/index.html" lang="vi" selected data-selected>Tiếng Việt</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </li>
+            <li class="R-historyclearer">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-history"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <button>Xóa lịch sử..</button>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer"><left>
     
      <b> Workshop</b> <br>
     <img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
@@ -687,7 +322,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>12-8-2025</font></i>
+        <i><font color=orange>13-8-2025</font></i>
     </left>
     <left>
         <br>
@@ -700,503 +335,12 @@
         </left>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
-
-    </section>
-  </div>
-</nav>
-
-
-
-
-        <section id="body">
-        <div id="overlay"></div>
-        <div class="padding highlightable">
-              
-              <div>
-                <div id="top-bar">
-                
-                
-                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                    <span id="sidebar-toggle-span">
-                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
-                          <i class="fas fa-bars"></i>
-                        </a>
-                    </span>
-                  
-                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
-                  
-                  <span class="links">
-                 
-                 
-                    
-          
-          
-            
-            
-          
-          
-            
-            
-          
-          
-            <a href='/workshop-aws/vi/'>Session Management</a> > <a href='/workshop-aws/vi/2-prerequiste/'>Các bước chuẩn bị</a> > Tạo IAM Role
-          
-        
-          
-        
-          
-        
-                 
-                  </span>
-                </div>
-                
-                    <div class="progress">
-    <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#tao-iam-role">Tạo IAM Role</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-    </div>
 </div>
-
-                
-              </div>
-            </div>
-            
-        <div id="head-tags">
-        
-        </div>
-        
-        <div id="body-inner">
-          
-            <h1>
-              
-              Tạo IAM Role
-            </h1>
-          
-
-        
-
-
-
-	<h3 id="tao-iam-role">Tạo IAM Role</h3>
-<p>Trong bước này sẽ tiến hành tạo IAM Role dành cho các chức năng của lambda. Trong IAM Role này sẽ được gán cho các policy với chức năng cho phép <strong>Lambda</strong> tạo và ghi chú lại log trên <strong>CloudWatch</strong> để kiểm tra nếu có lỗi trong quá trình làm. Tiếp theo là chức năng cho phép <strong>Lambda</strong> đọc và ghi dữ liệu vào 2 bảng <strong>DynamoDB</strong> sẽ tạo sắp tới là <strong>User</strong> và <strong>Messages</strong>. Kế tiếp là cho phép <strong>Lambda</strong> upload file và trong <strong>S3</strong>. Và cuối cùng là cho phép <strong>Lambda</strong> gửi tin nhắn hoặc đóng kết nối Websocket thông qua <strong>API Gateway</strong></p>
-<ol>
-<li>
-<p>Truy cập vào dịch vụ <a href="https://console.aws.amazon.com/iamv2/">IAM</a></p>
-</li>
-<li>
-<p>Ở thanh điều hướng bên trái, click  <strong>Policies</strong>.<br>
-<img src="/images/2.prerequisite/013.png" alt="policy"></p>
-</li>
-<li>
-<p>Click <strong>Create Policy</strong>.<br>
-<img src="/images/2.prerequisite/014.png" alt="policy1"></p>
-</li>
-<li>
-<p>Ở phần <strong>Policy editor</strong> chọn <strong>JSON</strong></p>
-</li>
-</ol>
-<ul>
-<li>Vào file code đã tải vào thư mục <strong>backend/lambda</strong> mở file <strong>policyLambda.json</strong> copy đoạn json đó và dán vào phần <strong>Policy editor</strong> sau đó chọn next.<br>
-<img src="/images/2.prerequisite/015.png" alt="createpolicy"></li>
-</ul>
-<ol start="5">
-<li>Trong ô Policy name, điền tên cho policy là <code>chatapp</code> và kiểm tra lại phần <strong>Permissions defined in this policy</strong> xem đã đủ policy chưa.
-<img src="/images/2.prerequisite/016.png" alt="createpolicy1"></li>
-</ol>
-<ul>
-<li>Click <strong>Create policy</strong> để tạo policy
-<img src="/images/2.prerequisite/017.png" alt="createpolicy2"></li>
-</ul>
-<ol start="6">
-<li>Ở thanh điều hướng bên trái, click  <strong>Roles</strong>.
-<img src="/images/2.prerequisite/018.png" alt="role"></li>
-</ol>
-<ul>
-<li>Click <strong>Create role</strong></li>
-<li>Ở mục <strong>Service or use case</strong> của <strong>Use case</strong> chọn <strong>Lambda</strong></li>
-<li>Click <strong>Next</strong>
-<img src="/images/2.prerequisite/019.png" alt="createrole"></li>
-<li>Chọn Policy đã tạo ở trên và ấn <strong>Next</strong>
-<img src="/images/2.prerequisite/020.png" alt="createrole1"></li>
-<li>Ở <strong>Role name</strong> nhập <code>chatapp-role</code> sau đó kiểm tra lại và ấn <strong>Create role</strong>
-<img src="/images/2.prerequisite/021.png" alt="createrole2">
-<img src="/images/2.prerequisite/022.png" alt="createrole3">
-<img src="/images/2.prerequisite/023.png" alt="createrole4"></li>
-</ul>
-
-
-
-
-
-<footer class=" footline" >
-	
-</footer>
-
-        
-        </div> 
-        
-
       </div>
-
-    <div id="navigation">
-        
-        
-        
-        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-        
-        
-
-
-	 
-	 
-		
-			<a class="nav nav-prev" href="/workshop-aws/vi/2-prerequiste/2.1-creates3/2.1.2-creates3pic/" title="Tạo S3 chứa hình ảnh"> <i class="fa fa-chevron-left"></i></a>
-		
-		
-			<a class="nav nav-next" href="/workshop-aws/vi/2-prerequiste/2.3-createdb/" title="Tạo DynamoDB" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
-		
-	
-    </div>
-
-    </section>
-    
-    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
-      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
-    </div>
-    <script src="/workshop-aws/js/clipboard.min.js?1755106062"></script>
-    <script src="/workshop-aws/js/perfect-scrollbar.min.js?1755106062"></script>
-    <script src="/workshop-aws/js/perfect-scrollbar.jquery.min.js?1755106062"></script>
-    <script src="/workshop-aws/js/jquery.sticky.js?1755106062"></script>
-    <script src="/workshop-aws/js/featherlight.min.js?1755106062"></script>
-    <script src="/workshop-aws/js/highlight.pack.js?1755106062"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/workshop-aws/js/modernizr.custom-3.6.0.js?1755106062"></script>
-    <script src="/workshop-aws/js/learn.js?1755106062"></script>
-    <script src="/workshop-aws/js/hugo-learn.js?1755106062"></script>
-
-    <link href="/workshop-aws/mermaid/mermaid.css?1755106062" rel="stylesheet" />
-    <script src="/workshop-aws/mermaid/mermaid.js?1755106062"></script>
-    <script>
-        mermaid.initialize({ startOnLoad: true });
-    </script>
-    <script>
+    </aside>
+    <script src="/workshop-aws/js/clipboard/clipboard.min.js?1755107199" defer></script>
+    <script src="/workshop-aws/js/perfect-scrollbar/perfect-scrollbar.min.js?1755107199" defer></script>
+    <script src="/workshop-aws/js/theme.min.js?1755107199" defer></script><script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

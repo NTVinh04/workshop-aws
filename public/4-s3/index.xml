@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Manage session logs on AWS workshop</title>
-    <link>https://ntvinh04.github.io/workshop-aws/4-s3/</link>
-    <description>Recent content in Manage session logs on AWS workshop</description>
+    <title>Manage session logs :: AWS Workshop</title>
+    <link>https://ntvinh04.github.io/workshop-aws/4-s3/index.html</link>
+    <description>With Session Manager, we can view the history of connections to instances through Session history. However, we have not seen the details of the commands used in a session.&#xA;In this section, we will proceed to create an S3 bucket and configure the session logs feature to see the details of the commands used in the session.</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate></lastBuildDate>

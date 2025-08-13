@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tải code lên S3 on AWS workshop</title>
-    <link>https://ntvinh04.github.io/workshop-aws/vi/4-s3/</link>
-    <description>Recent content in Tải code lên S3 on AWS workshop</description>
+    <title>Tải code lên S3 :: AWS Workshop</title>
+    <link>https://ntvinh04.github.io/workshop-aws/vi/4-s3/index.html</link>
+    <description>Sau khi thực hiện toàn bộ các phần trên thì chỉ còn 1 bước là tải code lên bucket chứa website&#xA;Vào thư mục chứa code cd vào frontend và nhập npm install&#xA;Sau khi npm install xong thì nhập npm run build Sau khi chạy xong ta sẽ có file dist đây là file code frontend đã được tối giản đi để AWS sử dụng</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate></lastBuildDate>

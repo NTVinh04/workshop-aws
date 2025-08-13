@@ -1,12 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Các bước chuẩn bị on AWS workshop</title>
-    <link>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/</link>
-    <description>Recent content in Các bước chuẩn bị on AWS workshop</description>
+    <title>Các bước chuẩn bị :: AWS Workshop</title>
+    <link>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/index.html</link>
+    <description>Nội dung Chuẩn bị S3 cho webchat Tạo IAM Role Tạo DynamoDB Tạo cognito</description>
     <generator>Hugo</generator>
     <language>vi</language>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Mon, 11 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tạo S3</title>
+      <link>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.1-creates3/index.html</link>
+      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.1-creates3/index.html</guid>
+      <description>Trong bước này sẽ cần tạo 2 bucket trong S3 với 1 bucket dùng để lưu trữ và chạy website và 1 bucket để chứa avatar, hình ảnh từ tin nhắn người dùng gửi cho nhau&#xA;Code sử dụng cho dự án Nội dung Tạo S3 chứa website Tạo S3 chứa hình ảnh</description>
+    </item>
+    <item>
+      <title>Tạo IAM Role</title>
+      <link>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.2-createiamrole/index.html</link>
+      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.2-createiamrole/index.html</guid>
+      <description>Tạo IAM Role Trong bước này sẽ tiến hành tạo IAM Role dành cho các chức năng của lambda. Trong IAM Role này sẽ được gán cho các policy với chức năng cho phép Lambda tạo và ghi chú lại log trên CloudWatch để kiểm tra nếu có lỗi trong quá trình làm. Tiếp theo là chức năng cho phép Lambda đọc và ghi dữ liệu vào 2 bảng DynamoDB sẽ tạo sắp tới là User và Messages. Kế tiếp là cho phép Lambda upload file và trong S3. Và cuối cùng là cho phép Lambda gửi tin nhắn hoặc đóng kết nối Websocket thông qua API Gateway</description>
+    </item>
+    <item>
+      <title>Tạo DynamoDB</title>
+      <link>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.3-createdb/index.html</link>
+      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.3-createdb/index.html</guid>
+      <description>Tạo Table User và Messages Trong bước này sẽ tiến hành tạo 2 table là User và Messages để lưu trữ thông tin người dùng lấy từ cognito và để lưu trữ tin nhắn do người dùng gửi lên&#xA;Truy cập vào dịch vụ DynamoDB&#xA;Ở trang DynamoDB click Create table.&#xA;Ở mục Table name nhập User Ở mục Partition Key nhập userId Sau đó click Create Table Tiếp theo là table Messages Ở mục Table name nhập Messages Ở mục Partition Key nhập conversationId Ở mục Sort Key nhập timestamp Sau đó click Create Table Sau khi tạo xong chờ cho tới khi Status của 2 table đều là Active là hoàn thành.</description>
+    </item>
+    <item>
+      <title>Tạo Cognito</title>
+      <link>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.4-createcog/index.html</link>
+      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.4-createcog/index.html</guid>
+      <description>Tạo User Pools cho Webchat Trong bước này sẽ tiến hành tạo User pools để quản lý việc đăng ký, đăng nhập và xác minh cho người dùng&#xA;Truy cập vào dịch vụ Cognito Ở giao diện của cognito click Get started for free in less than five minutes hoặc ở thanh điều hướng bên trái click User pools, sau đó chọn Create user pool.&#xA;Ở mục Application type chọn Single-page application (SPA) vì SPA hỗ trợ tốt nhất cho các web sử dụng url thay đổi dựa trên hoạt động của người dùng giống như React. Ở phần Configure options mục Options for sign-in identifiers chọn email Ở mục Required attributes for sign-up chọn email và name để khi người dùng đăng ký bắt buộc phải nhập các thông tin đó mà không được bỏ qua Sau đó click Create user directory để tạo User pool Sau khi tạo xong quay lại giao diện User pools và chọn User pools vừa tạo Copy User pool ID ở giao diện User pool.&#xA;Sau đó vào phần search của file code và dán vào Replace, tìm file README.md và tìm dòng userpoolId copy và dán vào Search và nhấn Replace All để thay thế userpooldId ở trong code Ở thanh điều hướng bên trái, click App clients và chọn chatapp. Copy ClientID của chatapp sau đó thực hiện tương tự thay ClientID vừa tạo từ user pools cho ClientID của code Sau khi tạo xong 2 bucket trong S3, 2 table trong DynamoDB và đã tạo xong Userpool trong Cognito thì bước tiếp theo là tạo Lambda và API Gateway cho các Lambda</description>
+    </item>
   </channel>
 </rss>

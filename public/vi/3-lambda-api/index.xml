@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tạo Lambda và API Gateway on AWS workshop</title>
-    <link>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/</link>
-    <description>Recent content in Tạo Lambda và API Gateway on AWS workshop</description>
+    <title>Tạo Lambda và API Gateway :: AWS Workshop</title>
+    <link>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/index.html</link>
+    <description>Trong bước này, sẽ thực hiện tạo Lambda và API Gateway cho hệ thống.&#xA;Nội dung 3.1. Tạo Lambda 3.2. Tạo API Gateway</description>
     <generator>Hugo</generator>
     <language>vi</language>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Mon, 11 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tạo Lambda cho Web chat</title>
+      <link>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.1-lambda/index.html</link>
+      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.1-lambda/index.html</guid>
+      <description>Ở đoạn này chúng ta sẽ tạo ra 9 Lambda cần thiết cho web chat hoạt động&#xA;Nội dung Tạo Lambda cho REST API Tạo Lambda cho websocket</description>
+    </item>
+    <item>
+      <title>Tạo API Gateway</title>
+      <link>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.2-api-gateway/index.html</link>
+      <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.2-api-gateway/index.html</guid>
+      <description>Sau khi tạo xong các Lambda cho REST API và websocket thì tiếp theo là tạo các API tương tự để dùng cho Lambda&#xA;Nội dung: Tạo websocket Tạo REST API</description>
+    </item>
   </channel>
 </rss>

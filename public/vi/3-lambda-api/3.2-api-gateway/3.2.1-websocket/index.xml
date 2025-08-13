@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tạo Websocket on AWS workshop</title>
-    <link>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.2-api-gateway/3.2.1-websocket/</link>
-    <description>Recent content in Tạo Websocket on AWS workshop</description>
+    <title>Tạo Websocket :: AWS Workshop</title>
+    <link>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.2-api-gateway/3.2.1-websocket/index.html</link>
+    <description>Truy cập giao diện dịch vụ API Gateway Click create an API Ở Websocket API chọn Build Ở trường API name nhập chatapp&#xA;Ở trường Route selection expression nhập request.body.action sau đó chọn Next Chọn Add $connect route và Add $disconnect route để tạo route</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate></lastBuildDate>

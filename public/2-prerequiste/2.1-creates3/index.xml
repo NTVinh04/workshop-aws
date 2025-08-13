@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Preparing VPC and EC2 on AWS workshop</title>
-    <link>https://ntvinh04.github.io/workshop-aws/2-prerequiste/2.1-creates3/</link>
-    <description>Recent content in Preparing VPC and EC2 on AWS workshop</description>
+    <title>Preparing VPC and EC2 :: AWS Workshop</title>
+    <link>https://ntvinh04.github.io/workshop-aws/2-prerequiste/2.1-creates3/index.html</link>
+    <description>In this step, we will need to create a VPC with 2 public / private subnets. Then create 1 EC2 Instance Linux located in the public subnet, 1 EC2 Instance Windows located in the private subnet.&#xA;The architecture overview after you complete this step will be as follows:&#xA;To learn how to create EC2 instances and VPCs with public/private subnets, you can refer to the lab:</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate></lastBuildDate>
