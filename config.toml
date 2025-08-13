@@ -1,26 +1,31 @@
 baseURL = "https://ntvinh04.github.io/workshop-aws"
 
 # Change the default theme to be use when building the site with Hugo
-theme = "hugo-theme-learn"
+theme = "hugo-theme-relearn"
 
 # For search functionality
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
 
 [params]
-  # Change default color scheme with a variant one. Can be "red", "blue", "green".
-  themeVariant = "workshop"
-  # Git hub repo link
-  editURL = ""
-  description = ""
+  # Change default color scheme with a variant one
+  themeVariant = "relearn-bright"
+  # Git hub repo link for edit button
+  editPage = true
+  repoURL = "https://github.com/NTVinh04/workshop-aws"
+  description = "AWS System Manager Workshop"
   author = "journeyoftheaverageguy@gmail.com"
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false
+  # Enable search
+  disableSearch = false
+  # Enable print support
+  disablePrint = false
   
 [Languages]
 [Languages.en]
-title = "AWS workshop"
+title = "AWS Workshop"
 weight = 1
 languageName = "English"
 
@@ -31,7 +36,7 @@ url = "https://www.facebook.com/groups/awsstudygroupfcj/"
 weight = 20
 
 [Languages.vi]
-title = "AWS workshop"
+title = "AWS Workshop"  
 weight = 2
 languageName = "Tiếng Việt"
 
@@ -41,3 +46,7 @@ identifier = "AWS Study Group FB"
 url = "https://www.facebook.com/groups/awsstudygroupfcj/"
 weight = 20
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
