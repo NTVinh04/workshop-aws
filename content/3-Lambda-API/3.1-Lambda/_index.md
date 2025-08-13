@@ -13,7 +13,7 @@ pre : " <b> 3.1. </b> "
   + Click **Security**.
   + Click **Modify IAM role**.
 
-![Connect](/images/3.connect/001-connect.png)
+![Connect](/images/3.lambda-api/001-connect.png)
 
 2. At the Modify IAM role page.
   + Click to select **SSM-Role**.
@@ -29,17 +29,17 @@ You will need to wait about 10 minutes before performing the next step. This tim
   + Click **Start Session**.
 
 
-![Connect](/images/3.connect/002-connect.png)
+![Connect](/images/3.lambda-api/002-connect.png)
 
 
 4. Then select **Public Linux Instance** and click **Start session** to access the instance.
 
-![Connect](/images/3.connect/003-connect.png)
+![Connect](/images/3.lambda-api/003-connect.png)
 
 
 5. Terminal will appear on the browser. Testing with the command ``` sudo tcpdump -nn port 22 ``` and ```sudo tcpdump ``` we will see no SSH traffic but only HTTPS traffic.
 
-![Connect](/images/3.connect/004-connect.png)
+![Connect](/images/3.lambda-api/004-connect.png)
 
 {{% notice note %}}
  Above, we have created a connection to the public instance without opening SSH port 22, for better security, avoiding any attack to the SSH port.\

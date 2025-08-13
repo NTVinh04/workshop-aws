@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.148.2">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
-    <link rel="icon" href="/images/favicon.png" type="image/png">
+    <link rel="icon" href="/workshop-aws/images/favicon.png" type="image/png">
 
-    <title>Tạo Cognito :: AWS System Manager</title>
+    <title>Tạo Cognito :: AWS workshop</title>
 
     
-    <link href="/css/nucleus.css?1755080562" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1755080562" rel="stylesheet">
-    <link href="/css/hybrid.css?1755080562" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1755080562" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1755080562" rel="stylesheet">
-    <link href="/css/auto-complete.css?1755080562" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1755080562" rel="stylesheet">
-    <link href="/css/theme.css?1755080562" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1755080562" rel="stylesheet">
+    <link href="/workshop-aws/css/nucleus.css?1755106062" rel="stylesheet">
+    <link href="/workshop-aws/css/fontawesome-all.min.css?1755106062" rel="stylesheet">
+    <link href="/workshop-aws/css/hybrid.css?1755106062" rel="stylesheet">
+    <link href="/workshop-aws/css/featherlight.min.css?1755106062" rel="stylesheet">
+    <link href="/workshop-aws/css/perfect-scrollbar.min.css?1755106062" rel="stylesheet">
+    <link href="/workshop-aws/css/auto-complete.css?1755106062" rel="stylesheet">
+    <link href="/workshop-aws/css/atom-one-dark-reasonable.css?1755106062" rel="stylesheet">
+    <link href="/workshop-aws/css/theme.css?1755106062" rel="stylesheet">
+    <link href="/workshop-aws/css/hugo-theme.css?1755106062" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1755080562" rel="stylesheet">
+    <link href="/workshop-aws/css/theme-workshop.css?1755106062" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1755080562"></script>
+    <script src="/workshop-aws/js/jquery-3.3.1.min.js?1755106062"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/vi/2-prerequiste/2.4-createcog/">
+  <body class="" data-url="/workshop-aws/vi/2-prerequiste/2.4-createcog/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1755080562"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1755080562"></script>
+<script type="text/javascript" src="/workshop-aws/js/lunr.min.js?1755106062"></script>
+<script type="text/javascript" src="/workshop-aws/js/auto-complete.js?1755106062"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/localhost:1313\/\/vi";
+        var baseurl = "https:\/\/ntvinh04.github.io\/workshop-aws\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1755080562"></script>
+<script type="text/javascript" src="/workshop-aws/js/search.js?1755106062"></script>
 
     
   </div>
@@ -82,12 +82,12 @@
  
   
     
-    <li data-nav-id="/vi/1-introduce/" title="Giới thiệu" class="dd-item 
+    <li data-nav-id="/workshop-aws/vi/1-introduce/" title="Giới thiệu" class="dd-item 
         
         
         
         ">
-      <a href="/vi/1-introduce/">
+      <a href="/workshop-aws/vi/1-introduce/">
            <b> 1. </b> Giới thiệu
           
             <i class="fas fa-check read-icon"></i>
@@ -108,12 +108,12 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/" title="Các bước chuẩn bị" class="dd-item 
+    <li data-nav-id="/workshop-aws/vi/2-prerequiste/" title="Các bước chuẩn bị" class="dd-item 
         parent
         
         
         ">
-      <a href="/vi/2-prerequiste/">
+      <a href="/workshop-aws/vi/2-prerequiste/">
            <b> 2. </b> Các bước chuẩn bị
           
             <i class="fas fa-check read-icon"></i>
@@ -139,13 +139,13 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.1-creates3/" title="Chuẩn bị S3" class="dd-item 
+    <li data-nav-id="/workshop-aws/vi/2-prerequiste/2.1-creates3/" title="Tạo S3" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.1-creates3/">
-           <b> 2.1 </b> Chuẩn bị S3
+      <a href="/workshop-aws/vi/2-prerequiste/2.1-creates3/">
+           <b> 2.1 </b> Tạo S3
           
             <i class="fas fa-check read-icon"></i>
           
@@ -170,12 +170,12 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.1-creates3/2.1.1-creates3web/" title="Tạo S3 chứa website" class="dd-item 
+    <li data-nav-id="/workshop-aws/vi/2-prerequiste/2.1-creates3/2.1.1-creates3web/" title="Tạo S3 chứa website" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.1-creates3/2.1.1-creates3web/">
+      <a href="/workshop-aws/vi/2-prerequiste/2.1-creates3/2.1.1-creates3web/">
            <b> 2.1.1 </b> Tạo S3 chứa website
           
             <i class="fas fa-check read-icon"></i>
@@ -198,12 +198,12 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.1-creates3/2.1.2-creates3pic/" title="Tạo S3 chứa hình ảnh" class="dd-item 
+    <li data-nav-id="/workshop-aws/vi/2-prerequiste/2.1-creates3/2.1.2-creates3pic/" title="Tạo S3 chứa hình ảnh" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.1-creates3/2.1.2-creates3pic/">
+      <a href="/workshop-aws/vi/2-prerequiste/2.1-creates3/2.1.2-creates3pic/">
            <b> 2.1.2 </b> Tạo S3 chứa hình ảnh
           
             <i class="fas fa-check read-icon"></i>
@@ -235,12 +235,12 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.2-createiamrole/" title="Tạo IAM Role" class="dd-item 
+    <li data-nav-id="/workshop-aws/vi/2-prerequiste/2.2-createiamrole/" title="Tạo IAM Role" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.2-createiamrole/">
+      <a href="/workshop-aws/vi/2-prerequiste/2.2-createiamrole/">
            <b> 2.2 </b> Tạo IAM Role
           
             <i class="fas fa-check read-icon"></i>
@@ -263,12 +263,12 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.3-createdb/" title="Tạo DynamoDB" class="dd-item 
+    <li data-nav-id="/workshop-aws/vi/2-prerequiste/2.3-createdb/" title="Tạo DynamoDB" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.3-createdb/">
+      <a href="/workshop-aws/vi/2-prerequiste/2.3-createdb/">
            <b> 2.3 </b> Tạo DynamoDB
           
             <i class="fas fa-check read-icon"></i>
@@ -291,12 +291,12 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.4-createcog/" title="Tạo Cognito" class="dd-item 
+    <li data-nav-id="/workshop-aws/vi/2-prerequiste/2.4-createcog/" title="Tạo Cognito" class="dd-item 
         
         active
         
         ">
-      <a href="/vi/2-prerequiste/2.4-createcog/">
+      <a href="/workshop-aws/vi/2-prerequiste/2.4-createcog/">
            <b> 2.4 </b> Tạo Cognito
           
             <i class="fas fa-check read-icon"></i>
@@ -326,13 +326,13 @@
  
   
     
-    <li data-nav-id="/vi/3-accessibilitytoinstances/" title="Tạo kết nối đến máy chủ EC2" class="dd-item 
+    <li data-nav-id="/workshop-aws/vi/3-lambda-api/" title="Tạo Lambda và API Gateway" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-accessibilitytoinstances/">
-           <b> 3. </b> Tạo kết nối đến máy chủ EC2
+      <a href="/workshop-aws/vi/3-lambda-api/">
+           <b> 3. </b> Tạo Lambda và API Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -357,41 +357,13 @@
  
   
     
-    <li data-nav-id="/vi/3-accessibilitytoinstances/3.1-public-instance/" title="Kết nối đến máy chủ Public" class="dd-item 
+    <li data-nav-id="/workshop-aws/vi/3-lambda-api/3.1-lambda/" title="Tạo Lambda cho Web chat" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-accessibilitytoinstances/3.1-public-instance/">
-           <b> 3.1. </b> Kết nối đến máy chủ Public
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/" title="Tạo kết nối đến máy chủ EC2 Private" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/">
-           <b> 3.2. </b> Tạo kết nối đến máy chủ EC2 Private
+      <a href="/workshop-aws/vi/3-lambda-api/3.1-lambda/">
+           <b> 3.1. </b> Tạo Lambda cho Web chat
           
             <i class="fas fa-check read-icon"></i>
           
@@ -416,13 +388,13 @@
  
   
     
-    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.1-enablevpcdns/" title="Kích hoạt DNS hostnames" class="dd-item 
+    <li data-nav-id="/workshop-aws/vi/3-lambda-api/3.1-lambda/3.1.1-restapi/" title="Lambda REST API" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.1-enablevpcdns/">
-           <b> 3.2.1 </b> Kích hoạt DNS hostnames
+      <a href="/workshop-aws/vi/3-lambda-api/3.1-lambda/3.1.1-restapi/">
+           <b> 3.1.1 </b> Lambda REST API
           
             <i class="fas fa-check read-icon"></i>
           
@@ -444,100 +416,13 @@
  
   
     
-    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/" title="Tạo VPC Endpoint" class="dd-item 
+    <li data-nav-id="/workshop-aws/vi/3-lambda-api/3.1-lambda/3.1.2-websocket/" title="Lambda Websocket" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/">
-           <b> 3.2.2 </b> Tạo VPC Endpoint
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/" title="Tạo Endpoint ssm" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/">
-           <b> 3.2.2.1 </b> Tạo Endpoint ssm
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/" title="Tạo Endpoint ssmmessages" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/">
-           <b> 3.2.2.2 </b> Tạo Endpoint ssmmessages
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/" title="Tạo Endpoint ec2messages" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/">
-           <b> 3.2.2.3 </b> Tạo Endpoint ec2messages
+      <a href="/workshop-aws/vi/3-lambda-api/3.1-lambda/3.1.2-websocket/">
+           <b> 3.1.2 </b> Lambda Websocket
           
             <i class="fas fa-check read-icon"></i>
           
@@ -568,13 +453,72 @@
  
   
     
-    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.3-connectec2/" title="Kết nối EC2 Private" class="dd-item 
+    <li data-nav-id="/workshop-aws/vi/3-lambda-api/3.2-api-gateway/" title="Tạo API Gateway" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.3-connectec2/">
-           <b> 3.2.3 </b> Kết nối EC2 Private
+      <a href="/workshop-aws/vi/3-lambda-api/3.2-api-gateway/">
+           <b> 3.2. </b> Tạo API Gateway
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/workshop-aws/vi/3-lambda-api/3.2-api-gateway/3.2.1-websocket/" title="Tạo Websocket" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/workshop-aws/vi/3-lambda-api/3.2-api-gateway/3.2.1-websocket/">
+           <b> 3.2.1 </b> Tạo Websocket
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/workshop-aws/vi/3-lambda-api/3.2-api-gateway/3.2.2-restapi/" title="Tạo REST API" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/workshop-aws/vi/3-lambda-api/3.2-api-gateway/3.2.2-restapi/">
+           <b> 3.2.2 </b> Tạo REST API
           
             <i class="fas fa-check read-icon"></i>
           
@@ -612,163 +556,13 @@
  
   
     
-    <li data-nav-id="/vi/4-s3log/" title="Quản lý session logs" class="dd-item 
+    <li data-nav-id="/workshop-aws/vi/4-s3/" title="Tải code lên S3" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-s3log/">
-           <b> 4. </b> Quản lý session logs
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-s3log/4.1-updateiamrole/" title="Cập nhật IAM Role" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-s3log/4.1-updateiamrole/">
-           <b> 4.1 </b> Cập nhật IAM Role
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-s3log/4.2-creates3bucket/" title="Tạo S3 Bucket" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-s3log/4.2-creates3bucket/">
-           <b> 4.2 </b> Tạo S3 Bucket
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-s3log/4.3-creategwes3/" title="Tạo S3 Gateway endpoint" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-s3log/4.3-creategwes3/">
-           <b> 4.3 </b> Tạo S3 Gateway endpoint
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-s3log/4.4-configsessionlogs/" title="Theo dõi session logs" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-s3log/4.4-configsessionlogs/">
-           <b> 4.4 </b> Theo dõi session logs
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/5-portfwd/" title="Port Forwarding" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/5-portfwd/">
-           <b> 5. </b> Port Forwarding
+      <a href="/workshop-aws/vi/4-s3/">
+           <b> 4. </b> Tải code lên S3
           
             <i class="fas fa-check read-icon"></i>
           
@@ -788,13 +582,13 @@
  
   
     
-    <li data-nav-id="/vi/6-cleanup/" title="Dọn dẹp tài nguyên  " class="dd-item 
+    <li data-nav-id="/workshop-aws/vi/5-cleanup/" title="Dọn dẹp tài nguyên  " class="dd-item 
         
         
         
         ">
-      <a href="/vi/6-cleanup/">
-          <b>6. </b>Dọn dẹp tài nguyên  
+      <a href="/workshop-aws/vi/5-cleanup/">
+          <b>5. </b>Dọn dẹp tài nguyên  
           
             <i class="fas fa-check read-icon"></i>
           
@@ -843,7 +637,7 @@
                   
                     
                     
-                      <option id="vi" value="//localhost:1313/vi/2-prerequiste/2.4-createcog/" selected>Tiếng Việt</option>
+                      <option id="vi" value="https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.4-createcog/" selected>Tiếng Việt</option>
                     
                   
               
@@ -933,7 +727,7 @@
             
           
           
-            <a href='/vi/'>Session Management</a> > <a href='/vi/2-prerequiste/'>Các bước chuẩn bị</a> > Tạo Cognito
+            <a href='/workshop-aws/vi/'>Session Management</a> > <a href='/workshop-aws/vi/2-prerequiste/'>Các bước chuẩn bị</a> > Tạo Cognito
           
         
           
@@ -1216,53 +1010,6 @@
 
                     
                     
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
                         
                     
                     
@@ -1296,44 +1043,6 @@
                     
                     
 
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
             
         
@@ -1387,35 +1096,6 @@
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
             
         
@@ -1464,10 +1144,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/2-prerequiste/2.3-createdb/" title="Tạo DynamoDB"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/workshop-aws/vi/2-prerequiste/2.3-createdb/" title="Tạo DynamoDB"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/3-accessibilitytoinstances/" title="Tạo kết nối đến máy chủ EC2" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/workshop-aws/vi/3-lambda-api/" title="Tạo Lambda và API Gateway" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1477,19 +1157,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1755080562"></script>
-    <script src="/js/perfect-scrollbar.min.js?1755080562"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1755080562"></script>
-    <script src="/js/jquery.sticky.js?1755080562"></script>
-    <script src="/js/featherlight.min.js?1755080562"></script>
-    <script src="/js/highlight.pack.js?1755080562"></script>
+    <script src="/workshop-aws/js/clipboard.min.js?1755106062"></script>
+    <script src="/workshop-aws/js/perfect-scrollbar.min.js?1755106062"></script>
+    <script src="/workshop-aws/js/perfect-scrollbar.jquery.min.js?1755106062"></script>
+    <script src="/workshop-aws/js/jquery.sticky.js?1755106062"></script>
+    <script src="/workshop-aws/js/featherlight.min.js?1755106062"></script>
+    <script src="/workshop-aws/js/highlight.pack.js?1755106062"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1755080562"></script>
-    <script src="/js/learn.js?1755080562"></script>
-    <script src="/js/hugo-learn.js?1755080562"></script>
+    <script src="/workshop-aws/js/modernizr.custom-3.6.0.js?1755106062"></script>
+    <script src="/workshop-aws/js/learn.js?1755106062"></script>
+    <script src="/workshop-aws/js/hugo-learn.js?1755106062"></script>
 
-    <link href="/mermaid/mermaid.css?1755080562" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1755080562"></script>
+    <link href="/workshop-aws/mermaid/mermaid.css?1755106062" rel="stylesheet" />
+    <script src="/workshop-aws/mermaid/mermaid.js?1755106062"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

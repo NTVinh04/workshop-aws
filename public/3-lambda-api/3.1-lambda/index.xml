@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Connect to Public Instance on AWS workshop</title>
+    <link>https://ntvinh04.github.io/workshop-aws/3-lambda-api/3.1-lambda/</link>
+    <description>Recent content in Connect to Public Instance on AWS workshop</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://ntvinh04.github.io/workshop-aws/3-lambda-api/3.1-lambda/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

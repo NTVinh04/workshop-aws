@@ -2,307 +2,202 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/vi/4-s3log/4.1-updateiamrole/</loc>
+    <loc>https://ntvinh04.github.io/workshop-aws/vi/1-introduce/</loc>
     <lastmod>2025-08-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/4-s3log/4.1-updateiamrole/"
+                href="https://ntvinh04.github.io/workshop-aws/1-introduce/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/4-s3log/4.1-updateiamrole/"
+                href="https://ntvinh04.github.io/workshop-aws/vi/1-introduce/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/2-prerequiste/2.1-creates3/</loc>
+    <loc>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.1-lambda/3.1.1-restapi/</loc>
+    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ntvinh04.github.io/workshop-aws/vi/</loc>
     <lastmod>2025-08-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-prerequiste/2.1-creates3/"
+                href="https://ntvinh04.github.io/workshop-aws/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-prerequiste/2.1-creates3/"
+                href="https://ntvinh04.github.io/workshop-aws/vi/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/1-introduce/</loc>
+    <loc>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.1-lambda/</loc>
     <lastmod>2025-08-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/1-introduce/"
+                href="https://ntvinh04.github.io/workshop-aws/3-lambda-api/3.1-lambda/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/1-introduce/"
+                href="https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.1-lambda/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/3-accessibilitytoinstances/3.1-public-instance/</loc>
+    <loc>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.1-creates3/</loc>
     <lastmod>2025-08-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-accessibilitytoinstances/3.1-public-instance/"
+                href="https://ntvinh04.github.io/workshop-aws/2-prerequiste/2.1-creates3/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-accessibilitytoinstances/3.1-public-instance/"
+                href="https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.1-creates3/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.1-enablevpcdns/</loc>
+    <loc>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.1-creates3/2.1.1-creates3web/</loc>
+    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.2-api-gateway/3.2.1-websocket/</loc>
     <lastmod>2025-08-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-accessibilitytoinstances/3.2-private-instance/3.2.1-enablevpcdns/"
+                href="https://ntvinh04.github.io/workshop-aws/3-lambda-api/3.2-api-gateway/3.2.1-websocket/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.1-enablevpcdns/"
+                href="https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.2-api-gateway/3.2.1-websocket/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/</loc>
+    <loc>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/</loc>
     <lastmod>2025-08-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/"
+                href="https://ntvinh04.github.io/workshop-aws/2-prerequiste/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/"
+                href="https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/</loc>
+    <loc>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.1-lambda/3.1.2-websocket/</loc>
+    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.2-api-gateway/</loc>
     <lastmod>2025-08-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/"
+                href="https://ntvinh04.github.io/workshop-aws/3-lambda-api/3.2-api-gateway/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/"
+                href="https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.2-api-gateway/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/2-prerequiste/2.1-creates3/2.1.1-creates3web/</loc>
-    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/vi/2-prerequiste/</loc>
+    <loc>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.2-createiamrole/</loc>
     <lastmod>2025-08-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-prerequiste/"
+                href="https://ntvinh04.github.io/workshop-aws/2-prerequiste/2.2-createiamrole/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-prerequiste/"
+                href="https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.2-createiamrole/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/</loc>
+    <loc>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.2-api-gateway/3.2.2-restapi/</loc>
     <lastmod>2025-08-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/"
+                href="https://ntvinh04.github.io/workshop-aws/3-lambda-api/3.2-api-gateway/3.2.2-restapi/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/"
+                href="https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/3.2-api-gateway/3.2.2-restapi/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/2-prerequiste/2.2-createiamrole/</loc>
+    <loc>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.1-creates3/2.1.2-creates3pic/</loc>
+    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.3-createdb/</loc>
+    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/</loc>
     <lastmod>2025-08-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-prerequiste/2.2-createiamrole/"
+                href="https://ntvinh04.github.io/workshop-aws/3-lambda-api/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-prerequiste/2.2-createiamrole/"
+                href="https://ntvinh04.github.io/workshop-aws/vi/3-lambda-api/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/3-accessibilitytoinstances/3.2-private-instance/</loc>
+    <loc>https://ntvinh04.github.io/workshop-aws/vi/4-s3/</loc>
     <lastmod>2025-08-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-accessibilitytoinstances/3.2-private-instance/"
+                href="https://ntvinh04.github.io/workshop-aws/4-s3/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-accessibilitytoinstances/3.2-private-instance/"
+                href="https://ntvinh04.github.io/workshop-aws/vi/4-s3/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/4-s3log/4.2-creates3bucket/</loc>
-    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/4-s3log/4.2-creates3bucket/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/4-s3log/4.2-creates3bucket/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/2-prerequiste/2.1-creates3/2.1.2-creates3pic/</loc>
+    <loc>https://ntvinh04.github.io/workshop-aws/vi/2-prerequiste/2.4-createcog/</loc>
     <lastmod>2025-08-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/</loc>
-    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.3-connectec2/</loc>
-    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/3-accessibilitytoinstances/3.2-private-instance/3.2.3-connectec2/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.3-connectec2/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/</loc>
-    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/3-accessibilitytoinstances/</loc>
-    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/3-accessibilitytoinstances/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/3-accessibilitytoinstances/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/4-s3log/4.3-creategwes3/</loc>
-    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/4-s3log/4.3-creategwes3/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/4-s3log/4.3-creategwes3/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/4-s3log/</loc>
-    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/4-s3log/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/4-s3log/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/4-s3log/4.4-configsessionlogs/</loc>
-    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/4-s3log/4.4-configsessionlogs/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/4-s3log/4.4-configsessionlogs/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/5-portfwd/</loc>
-    <lastmod>2025-08-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/5-portfwd/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/5-portfwd/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/6-cleanup/</loc>
+    <loc>https://ntvinh04.github.io/workshop-aws/vi/5-cleanup/</loc>
     <lastmod>1970-01-01T07:33:41+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/6-cleanup/"
+                href="https://ntvinh04.github.io/workshop-aws/5-cleanup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/6-cleanup/"
+                href="https://ntvinh04.github.io/workshop-aws/vi/5-cleanup/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/categories/</loc>
+    <loc>https://ntvinh04.github.io/workshop-aws/vi/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/categories/"
+                href="https://ntvinh04.github.io/workshop-aws/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/categories/"
+                href="https://ntvinh04.github.io/workshop-aws/vi/categories/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/tags/</loc>
+    <loc>https://ntvinh04.github.io/workshop-aws/vi/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/tags/"
+                href="https://ntvinh04.github.io/workshop-aws/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/tags/"
+                href="https://ntvinh04.github.io/workshop-aws/vi/tags/"
                 />
   </url>
 </urlset>
