@@ -1,4 +1,6 @@
-baseURL = "https://ntvinh04.github.io/workshop-aws"
+baseURL = "https://ntvinh04.github.io/workshop-aws/"
+canonifyURLs = true
+relativeURLs = true
 
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-learn"
