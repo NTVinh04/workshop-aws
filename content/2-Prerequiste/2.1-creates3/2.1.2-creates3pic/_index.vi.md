@@ -22,6 +22,9 @@ pre : " <b> 2.1.2 </b> "
   ![policy](/images/2.prerequisite/006.png)
   + Vào file code đã tải xuống tìm file **bucketPolicyPic.json** ở file **backend/s3** và copy
   + Tại phần Policy dán đoạn json đã copy vào sau đó chọn **Save changes**
+  {{% notice info %}}
+  Sửa link S3 trong file json bucket và CORS trên nếu đặt tên khác workshop
+  {{% /notice %}}
   ![policy](/images/2.prerequisite/009.png)
 
 4. Tiếp theo kéo xuống phần **Cross-origin resource sharing (CORS)** trong **Permissions** chọn edit
@@ -32,3 +35,6 @@ pre : " <b> 2.1.2 </b> "
 
 5. Sau đó vào file **frontend/public** và kéo **avatar.png** vào trong bucket **chatapp-pic**
   ![avatar](/images/2.prerequisite/012.png)
+  {{% notice info %}}
+Nếu đặt tên bucket khác với workshop thì nên lấy link avatar.png trong bucket vừa tạo sau đó trong code thư mục **frontend/constants** file **avatars3.js** thay đổi link để tránh gặp lỗi trong hệ thống
+{{% /notice %}}

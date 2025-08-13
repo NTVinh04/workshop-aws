@@ -9,7 +9,7 @@ pre : " <b> 2. </b> "
 ### Nội dung
   - [Chuẩn bị S3 cho webchat](2.1-creates3/)
   - [Tạo IAM Role](2.2-createiamrole/)
-  - [Tạo DynamoDB](2.3-createsDB/)
+  - [Tạo DynamoDB](2.3-createDB/)
   - [Tạo cognito](2.4-createCog/)
 
   

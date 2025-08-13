@@ -30,4 +30,7 @@ pre : " <b> 2.1.1 </b> "
   ![policy](/images/2.prerequisite/006.png)
   + Vào file code đã tải xuống tìm file **bucketPolicyWebchat.json** ở file **backend/s3** và copy
   + Tại phần Policy dán đoạn policy đã copy vào sau đó chọn **Save changes**
+  {{% notice info %}}
+  Sửa link S3 trong file json trên nếu đặt tên khác workshop
+  {{% /notice %}}
   ![policy](/images/2.prerequisite/007.png)
