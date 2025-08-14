@@ -1,10 +1,10 @@
-+++
-title = "Dọn dẹp tài nguyên  "
-date = 2021
-weight = 5
-chapter = false
-pre = "<b>5. </b>"
-+++
+---
+title : "Dọn dẹp tài nguyên  "
+date : 2025-08-11
+weight : 5
+chapter : false
+pre : "<b>5. </b>"
+---
 
 Bây giờ là các bước cần tiến hành để xóa các tài nguyên đã tạo.
 

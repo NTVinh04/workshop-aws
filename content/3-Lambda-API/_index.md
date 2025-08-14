@@ -1,13 +1,13 @@
 ---
-title : "Connect to EC2 servers"
+title: “Create Lambda and API Gateway”
 date: 2025-08-11
-weight : 3
-chapter : false
-pre : " <b> 3. </b> "
+weight: 3 
+chapter: false
+pre: “ <b> 3. </b> ”
 ---
 
-In this step, we will connect to our EC2 servers, located in both the public and private subnets.
+In this step, we will create **Lambda** and **API Gateway** for the system.
 
 ### Content
-3.1. [Connect to EC2 Public Server](3.1-public-instance/) \
-3.2. [Cconnect to EC2 Private Server](3.2-private-instance/)
+3.1. [Create Lambda](3.1-Lambda/) \
+3.2. [Create API Gateway](3.2-API-Gateway/)

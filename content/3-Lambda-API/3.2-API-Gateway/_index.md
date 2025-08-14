@@ -1,20 +1,12 @@
 ---
-title : "Connect to Private instance"
+title: “Create API Gateway”
 date: 2025-08-11
-weight : 2
-chapter : false
-pre : " <b> 3.2. </b> "
+weight: 2 
+chapter: false
+pre: “ <b> 3.2. </b> ”
 ---
-For **Windows instance** located in **private subnet**, there is no **public IP**, no **internet gateway** so it cannot go out **internet.**\
-With this type of instance, the traditional way is to use Bastion host technique which is expensive and laborious, but here we will use Session Manager with this type.\
-Basically, the **private instance** still has to open the **TCP 443** port to **System Manager**, but we don't want to allow connection go out to the internet, but only in its  VPC, to enhance our security posture.\
-To do that, we have to include the System Manager endpoint in the VPC, that is, using the **VPC interface endpoint:**
-
-![ConnectPrivate](/images/arc-03.png) 
-
-**VPC interface endpoint** is attached to the subnet, so this method can be done not only with **private subnet** but also with **public subnet**, meaning that with **public subnet**, you can completely prohibit **TCP 443** go out to the internet.
+After creating the Lambda functions for the REST API and WebSocket, the next step is to create similar APIs for use with Lambda.
 
 ### Content:
-   - [Enable DNS hostnames](./3.2.1-enablevpcdns/)
-   - [Create VPC Endpoint](./3.2.2-createvpcendpoint/)
-   - [Connect Private Instance](./3.3.3-connectec2/)
+   - [Create WebSocket](./3.2.1-websocket/)
+   - [Create REST API](./3.2.2-restapi/)

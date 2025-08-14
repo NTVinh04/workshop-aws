@@ -1,19 +1,13 @@
 ---
-title : "Preparing VPC and EC2"
+title: “Create S3”
 date: 2025-08-11
-weight : 1
-chapter : false
-pre : " <b> 2.1 </b> "
+weight: 1 
+chapter: false
+pre: “ <b> 2.1 </b> ”
 ---
+In this step, you will need to create two buckets in **S3**: one bucket for storing and running the website, and another bucket for storing avatars and images from messages sent between users.
 
-In this step, we will need to create a VPC with 2 public / private subnets. Then create 1 EC2 Instance Linux located in the public subnet, 1 EC2 Instance Windows located in the private subnet.
-
-The architecture overview after you complete this step will be as follows:
-
-![VPC](/images/arc-01.png)
-
-To learn how to create EC2 instances and VPCs with public/private subnets, you can refer to the lab:
-  - [About Amazon EC2](https://000004.awsstudygroup.com/en/)
-  - [Works with Amazon VPC](https://000003.awsstudygroup.com/en/)
-
-
+  - [Code used for the project](https://github.com/NTVinh04/WebchatAWS)
+### Content
+  - [Create S3 for the website](2.1.1-creates3web/)
+  - [Create S3 for images](2.1.2-creates3pic/)

@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.111.0">
+    <meta name="generator" content="Hugo 0.110.0">
     <meta name="description" content="AWS System Manager Workshop">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
-    <link rel="icon" href="/workshop-aws/images/favicon.png" type="image/png">
+    <link rel="icon" href="../images/favicon.png" type="image/png">
 
-    <title>Clean up resources :: AWS System Manager</title>
+    <title>“Cleaning up resources  ” :: AWS System Manager</title>
 
     
-    <link href="/workshop-aws/css/nucleus.css?1755109451" rel="stylesheet">
-    <link href="/workshop-aws/css/fontawesome-all.min.css?1755109451" rel="stylesheet">
-    <link href="/workshop-aws/css/hybrid.css?1755109451" rel="stylesheet">
-    <link href="/workshop-aws/css/featherlight.min.css?1755109451" rel="stylesheet">
-    <link href="/workshop-aws/css/perfect-scrollbar.min.css?1755109451" rel="stylesheet">
-    <link href="/workshop-aws/css/auto-complete.css?1755109451" rel="stylesheet">
-    <link href="/workshop-aws/css/atom-one-dark-reasonable.css?1755109451" rel="stylesheet">
-    <link href="/workshop-aws/css/theme.css?1755109451" rel="stylesheet">
-    <link href="/workshop-aws/css/hugo-theme.css?1755109451" rel="stylesheet">
+    <link href="../css/nucleus.css?1755169505" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1755169505" rel="stylesheet">
+    <link href="../css/hybrid.css?1755169505" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1755169505" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1755169505" rel="stylesheet">
+    <link href="../css/auto-complete.css?1755169505" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1755169505" rel="stylesheet">
+    <link href="../css/theme.css?1755169505" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1755169505" rel="stylesheet">
     
-    <link href="/workshop-aws/css/theme-workshop.css?1755109451" rel="stylesheet">
+    <link href="../css/theme-workshop.css?1755169505" rel="stylesheet">
     
     
 
-    <script src="/workshop-aws/js/jquery-3.3.1.min.js?1755109451"></script>
+    <script src="../js/jquery-3.3.1.min.js?1755169505"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -36,14 +36,14 @@
     </style>
     
   </head>
-  <body class="" data-url="/workshop-aws/5-cleanup/">
+  <body class="" data-url="../5-cleanup/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
 
   <div id="header-wrapper">
     <div id="header">
-      <a id="logo" href="/">
+      <a id="logo" href="../">
 
 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f90;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg>
 
@@ -58,15 +58,15 @@
 </div>
 
 
-<script src='/workshop-aws/js/lunr.min.js?1755109451'></script>
-<script src='/workshop-aws/js/auto-complete.js?1755109451'></script>
+<script src='../js/lunr.min.js?1755169505'></script>
+<script src='../js/auto-complete.js?1755169505'></script>
 
 <script>
   
-  var baseurl = '\/workshop-aws';
+  var baseurl = '\/';
 </script>
 
-<script src='/workshop-aws/js/search.js?1755109451'></script>
+<script src='../js/search.js?1755169505'></script>
 
     
   </div>
@@ -84,13 +84,13 @@
  
   
     
-    <li data-nav-id="/workshop-aws/1-introduce/" title="Introduction" class="dd-item 
+    <li data-nav-id="/1-introduce/" title="“Introduction”" class="dd-item 
         
         
         
         ">
-      <a href="/workshop-aws/1-introduce/">
-           <b> 1. </b> Introduction
+      <a href="../1-introduce/">
+          “ <b> 1. </b> ”“Introduction”
           
             <i class="fas fa-check read-icon"></i>
           
@@ -110,13 +110,13 @@
  
   
     
-    <li data-nav-id="/workshop-aws/2-prerequiste/" title="Preparation " class="dd-item 
+    <li data-nav-id="/2-prerequiste/" title="“Preparation Steps”" class="dd-item 
         
         
         
         ">
-      <a href="/workshop-aws/2-prerequiste/">
-           <b> 2. </b> Preparation 
+      <a href="../2-prerequiste/">
+          “ <b> 2. </b> ”“Preparation Steps”
           
             <i class="fas fa-check read-icon"></i>
           
@@ -141,13 +141,44 @@
  
   
     
-    <li data-nav-id="/workshop-aws/2-prerequiste/2.1-creates3/" title="Preparing VPC and EC2" class="dd-item 
+    <li data-nav-id="/2-prerequiste/2.1-creates3/" title="“Create S3”" class="dd-item 
         
         
         
         ">
-      <a href="/workshop-aws/2-prerequiste/2.1-creates3/">
-           <b> 2.1 </b> Preparing VPC and EC2
+      <a href="../2-prerequiste/2.1-creates3/">
+          “ <b> 2.1 </b> ”“Create S3”
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prerequiste/2.1-creates3/2.1.1-creates3web/" title="“Create an S3 bucket for website”" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../2-prerequiste/2.1-creates3/2.1.1-creates3web/">
+          “ <b> 2.1.1 </b> ”“Create an S3 bucket for website”
           
             <i class="fas fa-check read-icon"></i>
           
@@ -169,13 +200,106 @@
  
   
     
-    <li data-nav-id="/workshop-aws/2-prerequiste/2.2-createiamrole/" title="Create IAM Role" class="dd-item 
+    <li data-nav-id="/2-prerequiste/2.1-creates3/2.1.2-creates3pic/" title="“Create an S3 bucket for images”" class="dd-item 
         
         
         
         ">
-      <a href="/workshop-aws/2-prerequiste/2.2-createiamrole/">
-           <b> 2.2 </b> Create IAM Role
+      <a href="../2-prerequiste/2.1-creates3/2.1.2-creates3pic/">
+          “ <b> 2.1.2 </b> ”“Create an S3 bucket for images”
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prerequiste/2.2-createiamrole/" title="“Create IAM Role”" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../2-prerequiste/2.2-createiamrole/">
+          “ <b> 2.2 </b> ”“Create IAM Role”
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prerequiste/2.3-createdb/" title="“Create DynamoDB”" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../2-prerequiste/2.3-createdb/">
+          “ <b> 2.3 </b> ”“Create DynamoDB”
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-prerequiste/2.4-createcog/" title="“Create Cognito”" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../2-prerequiste/2.4-createcog/">
+          “ <b> 2.4 </b> ”“Create Cognito”
           
             <i class="fas fa-check read-icon"></i>
           
@@ -204,13 +328,13 @@
  
   
     
-    <li data-nav-id="/workshop-aws/3-lambda-api/" title="Connect to EC2 servers" class="dd-item 
+    <li data-nav-id="/3-lambda-api/" title="“Create Lambda and API Gateway”" class="dd-item 
         
         
         
         ">
-      <a href="/workshop-aws/3-lambda-api/">
-           <b> 3. </b> Connect to EC2 servers
+      <a href="../3-lambda-api/">
+          “ <b> 3. </b> ”“Create Lambda and API Gateway”
           
             <i class="fas fa-check read-icon"></i>
           
@@ -235,41 +359,13 @@
  
   
     
-    <li data-nav-id="/workshop-aws/3-lambda-api/3.1-lambda/" title="Connect to Public Instance" class="dd-item 
+    <li data-nav-id="/3-lambda-api/3.1-lambda/" title="“Create Lambda for Web Chat”" class="dd-item 
         
         
         
         ">
-      <a href="/workshop-aws/3-lambda-api/3.1-lambda/">
-           <b> 3.1. </b> Connect to Public Instance
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/workshop-aws/3-lambda-api/3.2-api-gateway/" title="Connect to Private instance" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/workshop-aws/3-lambda-api/3.2-api-gateway/">
-           <b> 3.2. </b> Connect to Private instance
+      <a href="../3-lambda-api/3.1-lambda/">
+          “ <b> 3.1. </b> ”“Create Lambda for Web Chat”
           
             <i class="fas fa-check read-icon"></i>
           
@@ -294,13 +390,13 @@
  
   
     
-    <li data-nav-id="/workshop-aws/3-lambda-api/3.2-api-gateway/3.2.2-restapi/" title="Enable DNS hostnames" class="dd-item 
+    <li data-nav-id="/3-lambda-api/3.1-lambda/3.1.1-restapi/" title="“Lambda REST API”" class="dd-item 
         
         
         
         ">
-      <a href="/workshop-aws/3-lambda-api/3.2-api-gateway/3.2.2-restapi/">
-           <b> 3.2.1 </b> Enable DNS hostnames
+      <a href="../3-lambda-api/3.1-lambda/3.1.1-restapi/">
+          “ <b> 3.1.1 </b> ”“Lambda REST API”
           
             <i class="fas fa-check read-icon"></i>
           
@@ -322,12 +418,108 @@
  
   
     
-    <li data-nav-id="/workshop-aws/3-lambda-api/3.2-api-gateway/3.2.1-websocket/" title="Create VPC Endpoint" class="dd-item 
+    <li data-nav-id="/3-lambda-api/3.1-lambda/3.1.2-websocket/" title="“Lambda Websocket”" class="dd-item 
         
         
         
         ">
-      <a href="/workshop-aws/3-lambda-api/3.2-api-gateway/3.2.1-websocket/">
+      <a href="../3-lambda-api/3.1-lambda/3.1.2-websocket/">
+          “ <b> 3.1.2 </b> ”“Lambda Websocket”
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-lambda-api/3.2-api-gateway/" title="“Create API Gateway”" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../3-lambda-api/3.2-api-gateway/">
+          “ <b> 3.2. </b> ”“Create API Gateway”
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-lambda-api/3.2-api-gateway/3.2.2-restapi/" title="“Create REST API”" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../3-lambda-api/3.2-api-gateway/3.2.2-restapi/">
+          “ <b> 3.2.2 </b> ”“Create REST API”
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-lambda-api/3.2-api-gateway/3.2.1-websocket/" title="Create VPC Endpoint" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../3-lambda-api/3.2-api-gateway/3.2.1-websocket/">
            <b> 3.2.2 </b> Create VPC Endpoint
           
             <i class="fas fa-check read-icon"></i>
@@ -366,13 +558,13 @@
  
   
     
-    <li data-nav-id="/workshop-aws/4-s3/" title="Manage session logs" class="dd-item 
+    <li data-nav-id="/4-s3/" title="“Upload code to S3”" class="dd-item 
         
         
         
         ">
-      <a href="/workshop-aws/4-s3/">
-           <b> 4. </b> Manage session logs
+      <a href="../4-s3/">
+          “ <b> 4. </b> ”“Upload code to S3”
           
             <i class="fas fa-check read-icon"></i>
           
@@ -392,13 +584,13 @@
  
   
     
-    <li data-nav-id="/workshop-aws/5-cleanup/" title="Clean up resources" class="dd-item 
+    <li data-nav-id="/5-cleanup/" title="“Cleaning up resources  ”" class="dd-item 
         
         active
         
         ">
-      <a href="/workshop-aws/5-cleanup/">
-          <b>6. </b>Clean up resources
+      <a href="../5-cleanup/">
+          “<b>5. </b>”“Cleaning up resources  ”
           
             <i class="fas fa-check read-icon"></i>
           
@@ -556,7 +748,7 @@
             
           
           
-            <a href='/workshop-aws/'>Session Management</a> > Clean up resources
+            <a href='../'>WebChat Serverless realtime</a> > “Cleaning up resources  ”
           
         
           
@@ -591,7 +783,7 @@
           
             <h1>
               
-              Clean up resources
+              “Cleaning up resources  ”
             </h1>
           
 
@@ -599,109 +791,80 @@
 
 
 
-	<p>We will take the following steps to delete the resources we created in this exercise.</p>
-<h4 id="delete-ec2-instance">Delete EC2 instance</h4>
+	<p>Now, here are the steps to delete the resources you created.</p>
+<h4 id="delete-s3">Delete S3</h4>
 <ol>
-<li>
-<p>Go to <a href="https://console.aws.amazon.com/ec2/v2/home">EC2 service management console</a></p>
-<ul>
-<li>Click <strong>Instances</strong>.</li>
-<li>Select both <strong>Public Linux Instance</strong> and <strong>Private Windows Instance</strong> instances.</li>
-<li>Click <strong>Instance state</strong>.</li>
-<li>Click <strong>Terminate instance</strong>, then click <strong>Terminate</strong> to confirm.</li>
-</ul>
-</li>
-<li>
-<p>Go to <a href="https://console.aws.amazon.com/iamv2/home#/home">IAM service management console</a></p>
-<ul>
-<li>Click <strong>Roles</strong>.</li>
-<li>In the search box, enter <strong>SSM</strong>.</li>
-<li>Click to select <strong>SSM-Role</strong>.</li>
-<li>Click <strong>Delete</strong>, then enter the role name <strong>SSM-Role</strong> and click <strong>Delete</strong> to delete the role.</li>
-</ul>
-</li>
+<li>Access <a href="https://s3.console.aws.amazon.com/s3/home">S3</a></li>
 </ol>
-<p><img src="/images/6.clean/001-clean.png" alt="Clean"></p>
-<ol start="3">
-<li>Click <strong>Users</strong>.
 <ul>
-<li>Click on user <strong>Portfwd</strong>.</li>
-<li>Click <strong>Delete</strong>, then enter the user name <strong>Portfwd</strong> and click <strong>Delete</strong> to delete the user.</li>
-</ul>
-</li>
-</ol>
-<h4 id="delete-s3-bucket">Delete S3 bucket</h4>
-<ol>
-<li>
-<p>Access <a href="https://console.aws.amazon.com/systems-manager/session-manager">System Manager - Session Manager service management console</a>.</p>
-<ul>
-<li>Click the <strong>Preferences</strong> tab.</li>
-<li>Click <strong>Edit</strong>.</li>
-<li>Scroll down.</li>
-<li>In the section <strong>S3 logging</strong>.</li>
-<li>Uncheck <strong>Enable</strong> to disable logging.</li>
-<li>Scroll down.</li>
-<li>Click <strong>Save</strong>.</li>
-</ul>
-</li>
-<li>
-<p>Go to <a href="https://s3.console.aws.amazon.com/s3/home">S3 service management console</a></p>
-<ul>
-<li>Click on the S3 bucket we created for this lab. (Example: lab-fcj-bucket-0001 )</li>
+<li>Click to select the S3 bucket you created</li>
 <li>Click <strong>Empty</strong>.</li>
-<li>Enter <strong>permanently delete</strong>, then click <strong>Empty</strong> to proceed to delete the object in the bucket.</li>
+<li>Enter <strong>permanently delete</strong>, then click <strong>Empty</strong> to delete the objects in the bucket.</li>
 <li>Click <strong>Exit</strong>.</li>
 </ul>
-</li>
-<li>
-<p>After deleting all objects in the bucket, click <strong>Delete</strong></p>
-</li>
-</ol>
-<p><img src="/images/6.clean/002-clean.png" alt="Clean"></p>
-<ol start="4">
-<li>Enter the name of the S3 bucket, then click <strong>Delete bucket</strong> to proceed with deleting the S3 bucket.</li>
-</ol>
-<p><img src="/images/6.clean/003-clean.png" alt="Clean"></p>
-<h4 id="delete-vpc-endpoints">Delete VPC Endpoints</h4>
-<ol>
-<li>Go to <a href="https://console.aws.amazon.com/vpc/home">VPC service management console</a>
-<ul>
-<li>Click <strong>Endpoints</strong>.</li>
-<li>Select the 4 endpoints we created for the lab including <strong>SSM</strong>, <strong>SSMMESSAGES</strong>, <strong>EC2MESSAGES</strong>, <strong>S3GW</strong>.</li>
-<li>Click <strong>Actions</strong>.</li>
-<li>Click <strong>Delete VPC endpoints</strong>.</li>
-</ul>
-</li>
-</ol>
-<p><img src="/images/6.clean/004-clean.png" alt="Clean"></p>
 <ol start="2">
-<li>
-<p>In the confirm box, enter <strong>delete</strong>.</p>
-<ul>
-<li>Click <strong>Delete</strong> to proceed with deleting endpoints.</li>
-</ul>
-</li>
-<li>
-<p>Click the refresh icon, check that all endpoints have been deleted before proceeding to the next step.</p>
-</li>
+<li>After deleting all objects in the bucket, click <strong>Delete</strong></li>
 </ol>
-<p><img src="/images/6.clean/005-clean.png" alt="Clean"></p>
-<h4 id="delete-vpc">Delete VPC</h4>
-<ol>
-<li>
-<p>Go to <a href="https://console.aws.amazon.com/vpc/home">VPC service management console</a></p>
 <ul>
-<li>Click <strong>Your VPCs</strong>.</li>
-<li>Click on <strong>Lab VPC</strong>.</li>
-<li>Click <strong>Actions</strong>.</li>
-<li>Click <strong>Delete VPC</strong>.</li>
+<li>Then enter the bucket name and click <strong>Delete bucket</strong></li>
 </ul>
-</li>
-<li>
-<p>In the confirm box, enter <strong>delete</strong> to confirm, click <strong>Delete</strong> to delete <strong>Lab VPC</strong> and related resources.</p>
-</li>
-</ol>
-<p><img src="/images/6.clean/006-clean.png" alt="Clean"></p>
+<h4 id="delete-api-gateway">Delete API Gateway</h4>
+<p>Access <a href="https://console.aws.amazon.com/apigateway">API Gateway</a>.</p>
+<ul>
+<li>Click to select the created API</li>
+<li>Click <strong>Delete</strong></li>
+<li>Enter <strong>confirm</strong> and click <strong>Delete</strong></li>
+</ul>
+<h4 id="delete-cloudwatch">Delete CloudWatch</h4>
+<p>Access <a href="https://console.aws.amazon.com/cloudwatch">CloudWatch</a>.</p>
+<ul>
+<li>On the left sidebar, select <strong>Logs</strong>, then select <strong>Log groups</strong></li>
+<li>Click to select the log groups created during the process</li>
+<li>Click <strong>Action</strong> and select <strong>Delete log group(s)</strong></li>
+<li>Click <strong>Delete</strong></li>
+</ul>
+<h4 id="delete-policy">Delete Policy</h4>
+<p>Access <a href="https://console.aws.amazon.com/iamv2/">IAM</a>.</p>
+<ul>
+<li>On the left sidebar, select <strong>Policies</strong></li>
+<li>Click to select the policy created during the process</li>
+<li>Click <strong>Delete</strong></li>
+<li>Enter the policy name and click <strong>Delete</strong></li>
+</ul>
+<h4 id="delete-role">Delete Role</h4>
+<p>Access <a href="https://console.aws.amazon.com/iamv2/">IAM</a>.</p>
+<ul>
+<li>Select <strong>Roles</strong> from the left sidebar.</li>
+<li>Click on the role created during the process.</li>
+<li>Click <strong>Delete</strong>.</li>
+<li>Enter the role name and click <strong>Delete</strong>.</li>
+</ul>
+<h4 id="delete-lambda">Delete Lambda</h4>
+<p>Access the <a href="https://console.aws.amazon.com/lambda">Lambda</a> service page.</p>
+<ul>
+<li>On the left sidebar, select <strong>Functions</strong>.</li>
+<li>Click to select the functions created during the process.</li>
+<li>Click <strong>Action</strong> and select <strong>Delete</strong>.</li>
+<li>Enter <strong>confirm</strong> and click <strong>Delete</strong>.</li>
+</ul>
+<h4 id="delete-dynamodb">Delete DynamoDB</h4>
+<p>Access the <a href="https://console.aws.amazon.com/dynamodb/">DynamoDB</a> service.</p>
+<ul>
+<li>Select <strong>Tables</strong> from the left sidebar.</li>
+<li>Click to select the tables created during the process.</li>
+<li>Click <strong>Delete</strong>.</li>
+<li>Select <strong>Delete all CloudWatch alarms for the 2 tables selected</strong>.</li>
+<li>Enter <strong>confirm</strong> and click <strong>Delete</strong></li>
+</ul>
+<h4 id="delete">Delete</h4>
+<p>Access the Cognito service (<a href="https://console.aws.amazon.com/cognito/">https://console.aws.amazon.com/cognito/</a>)</p>
+<ul>
+<li>On the left sidebar, select <strong>User pools</strong></li>
+<li>Click to select the user pools created during the process</li>
+<li>Click <strong>Delete</strong></li>
+<li>Select <strong>Delete Cognito domain ap-southeast-1vhb6cgguj that you assigned</strong> and <strong>Deactivate deletion protection</strong>.</li>
+<li>Enter the user pool name and click <strong>Delete</strong></li>
+</ul>
 
 
 
@@ -781,6 +944,21 @@
 
                     
                     
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                     
 
                     
@@ -816,6 +994,72 @@
 
                     
                     
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                         
                     
                     
@@ -833,6 +1077,25 @@
                     
                     
 
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -932,10 +1195,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/workshop-aws/4-s3/" title="Manage session logs"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../4-s3/" title="“Upload code to S3”"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/workshop-aws/1-introduce/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../1-introduce/" title="“Introduction”" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -945,19 +1208,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/workshop-aws/js/clipboard.min.js?1755109451"></script>
-    <script src="/workshop-aws/js/perfect-scrollbar.min.js?1755109451"></script>
-    <script src="/workshop-aws/js/perfect-scrollbar.jquery.min.js?1755109451"></script>
-    <script src="/workshop-aws/js/jquery.sticky.js?1755109451"></script>
-    <script src="/workshop-aws/js/featherlight.min.js?1755109451"></script>
-    <script src="/workshop-aws/js/highlight.pack.js?1755109451"></script>
+    <script src="../js/clipboard.min.js?1755169505"></script>
+    <script src="../js/perfect-scrollbar.min.js?1755169505"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1755169505"></script>
+    <script src="../js/jquery.sticky.js?1755169505"></script>
+    <script src="../js/featherlight.min.js?1755169505"></script>
+    <script src="../js/highlight.pack.js?1755169505"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/workshop-aws/js/modernizr.custom-3.6.0.js?1755109451"></script>
-    <script src="/workshop-aws/js/learn.js?1755109451"></script>
-    <script src="/workshop-aws/js/hugo-learn.js?1755109451"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1755169505"></script>
+    <script src="../js/learn.js?1755169505"></script>
+    <script src="../js/hugo-learn.js?1755169505"></script>
 
-    <link href="/workshop-aws/mermaid/mermaid.css?1755109451" rel="stylesheet" />
-    <script src="/workshop-aws/mermaid/mermaid.js?1755109451"></script>
+    <link href="../mermaid/mermaid.css?1755169505" rel="stylesheet" />
+    <script src="../mermaid/mermaid.js?1755169505"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

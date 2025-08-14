@@ -11,7 +11,7 @@ pre : " <b> 1. </b> "
  Đây là workshop về webchat serverless realtime trên AWS sử dụng **S3** để lưu trữ website, lưu trữ hình ảnh do người dùng tải lên qua tin nhắn hoặc thay đổi avatar của người dùng. **Cognito** để xử lý việc đăng ký, đăng nhập và xác minh cho người dùng người dùng.
  Tiếp theo sẽ xây dựng api bằng **Lambda** và **API Gateway** để quản lý dữ liệu và sự tương tác của người dùng lên hệ thống. Sau đó sử dụng **DynamoDB** để lưu trữ dữ liệu do **Lambda** gửi lên trên hệ thống
 
-![Workshop](/images/aws.png) 
+![AWS](/images/aws.png) 
   [Link Test dự án](http://chatapp-web.s3-website-ap-southeast-1.amazonaws.com/)
 ### Nội dung
 

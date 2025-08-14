@@ -27,7 +27,7 @@ Trong bước này sẽ tiến hành tạo **User pools** để quản lý việ
   + Sau đó vào phần search của file code và dán vào **Replace**, tìm file **README.md** và tìm dòng **userpoolId** copy và dán vào **Search** và nhấn **Replace All** để thay thế userpooldId ở trong code
 ![role](/images/2.prerequisite/033.png)
 
-6. Ở thanh điều hướng bên trái, click  **App clients** và chọn **chatapp**.
+5. Ở thanh điều hướng bên trái, click  **App clients** và chọn **chatapp**.
 ![createrole](/images/2.prerequisite/034.png)
   + Copy **ClientID** của chatapp sau đó thực hiện tương tự thay **ClientID** vừa tạo từ user pools cho ClientID của code
 ![createrole1](/images/2.prerequisite/035.png)

@@ -1,21 +1,22 @@
 ---
-title : "Introduction"
+title: “Introduction”
 date: 2025-08-11
-weight : 1 
-chapter : false
-pre : " <b> 1. </b> "
+weight: 1 
+chapter: false
+pre: “ <b> 1. </b> ”
 ---
-**Session Manager** is a function within the AWS System Manager service, SSM provides verifiable and secure version management without opening incoming ports, without Bastion Host or SSH key management. Session Manager also makes it easy to comply with corporate policies that require controlled access to instances, strict security practices, and fully auditable logs with instance access details, while still providing end-users with one-click cross-platform access to your managed instances.
 
-By using Session Manager, you get the following advantages that traditional methods do not have:
+### Overview
 
-- No need to open port 22 for SSH protocol, so it is more secure.
-- Can be configured so that the connection does not need to go outside the internet, so it is more secure.
-- No need to manage the server's private key to connect to SSH.
-- Centralized management of users using AWS IAM.
-- Access to the server easily and simply with one click.
-- Faster access time than traditional methods like SSH
-- Support many different operating systems such as Linux, Windows, MacOS
-- Log the connection sessions and commands executed while connecting to the server.
-  
-With the above advantages, you can use Session Manager instead of using Bastion host technique to save us time and money when managing Bastion server. 
+This is a workshop about serverless real-time webchat on AWS using **S3** to store websites, store images uploaded by users via messages, or change user avatars. **Cognito** is used to handle user registration, login, and verification.
+ Next, we will build an API using **Lambda** and **API Gateway** to manage data and user interactions with the system. Then, we will use **DynamoDB** to store data sent by **Lambda** to the system.
+
+![AWS](/images/aws.png) 
+[Project Test Link](http://chatapp-web.s3-website-ap-southeast-1.amazonaws.com/)
+### Content
+
+1. [Introduction](1-introduce/)
+2. [Preparation steps](2-Prerequisites/)
+ 3. [Create Lambda and API Gateway](3-Lambda-API/)
+ 4. [Upload code to S3](4-s3/)
+ 5. [Clean up resources](5-cleanup/)
