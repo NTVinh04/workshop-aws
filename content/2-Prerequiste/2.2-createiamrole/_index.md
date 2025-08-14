@@ -1,9 +1,9 @@
 ---
-title: “Create IAM Role”
+title: "Create IAM Role"
 date: 2025-08-11
 weight: 2 
 chapter: false
-pre: “ <b> 2.2 </b> ”
+pre: " <b> 2.2 </b> "
 ---
 
 ### Create IAM Role

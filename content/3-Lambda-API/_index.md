@@ -1,9 +1,9 @@
 ---
-title: “Create Lambda and API Gateway”
+title: "Create Lambda and API Gateway"
 date: 2025-08-11
 weight: 3 
 chapter: false
-pre: “ <b> 3. </b> ”
+pre: " <b> 3. </b> "
 ---
 
 In this step, we will create **Lambda** and **API Gateway** for the system.

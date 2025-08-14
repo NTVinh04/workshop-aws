@@ -1,9 +1,9 @@
 ---
-title: “Create Cognito”
+title: "Create Cognito"
 date: 2025-08-11
 weight: 4 
 chapter: false
-pre: “ <b> 2.4 </b> ”
+pre: " <b> 2.4 </b> "
 ---
 
 ### Create User Pools for Webchat

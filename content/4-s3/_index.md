@@ -1,9 +1,9 @@
 ---
-title: “Upload code to S3”
+title: "Upload code to S3"
 date: 2025-08-11
 weight: 4 
 chapter: false
-pre: “ <b> 4. </b> ”
+pre: " <b> 4. </b> "
 ---
 After completing all the steps above, there is only one more step left: uploading the code to the website bucket.
 1. Go to the directory containing the code.

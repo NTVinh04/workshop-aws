@@ -1,9 +1,9 @@
 ---
-title: “Create DynamoDB”
+title: "Create DynamoDB"
 date: 2025-08-11
 weight: 3 
 chapter: false
-pre: “ <b> 2.3 </b> ”
+pre: " <b> 2.3 </b> "
 ---
 
 ### Create User and Messages Tables

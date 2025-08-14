@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.110.0">
+    <meta name="generator" content="Hugo 0.111.0">
     <meta name="description" content="AWS System Manager Workshop">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="../../images/favicon.png" type="image/png">
 
-    <title>Dọn dẹp tài nguyên   :: AWS System Manager</title>
+    <title>Tạo CloudFront :: AWS System Manager</title>
 
     
-    <link href="../../css/nucleus.css?1755169505" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1755169505" rel="stylesheet">
-    <link href="../../css/hybrid.css?1755169505" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1755169505" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1755169505" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1755169505" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1755169505" rel="stylesheet">
-    <link href="../../css/theme.css?1755169505" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1755169505" rel="stylesheet">
+    <link href="../../css/nucleus.css?1755190819" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1755190819" rel="stylesheet">
+    <link href="../../css/hybrid.css?1755190819" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1755190819" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1755190819" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1755190819" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1755190819" rel="stylesheet">
+    <link href="../../css/theme.css?1755190819" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1755190819" rel="stylesheet">
     
-    <link href="../../css/theme-workshop.css?1755169505" rel="stylesheet">
+    <link href="../../css/theme-workshop.css?1755190819" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1755169505"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1755190819"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="../../vi/5-cleanup/">
+  <body class="" data-url="../../vi/5-cloudfront/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -58,15 +58,15 @@
 </div>
 
 
-<script src='../../js/lunr.min.js?1755169505'></script>
-<script src='../../js/auto-complete.js?1755169505'></script>
+<script src='../../js/lunr.min.js?1755190819'></script>
+<script src='../../js/auto-complete.js?1755190819'></script>
 
 <script>
   
   var baseurl = '\/vi\/';
 </script>
 
-<script src='../../js/search.js?1755169505'></script>
+<script src='../../js/search.js?1755190819'></script>
 
     
   </div>
@@ -584,13 +584,39 @@
  
   
     
-    <li data-nav-id="/vi/5-cleanup/" title="Dọn dẹp tài nguyên  " class="dd-item 
+    <li data-nav-id="/vi/5-cloudfront/" title="Tạo CloudFront" class="dd-item 
         
         active
         
         ">
-      <a href="../../vi/5-cleanup/">
-          <b>5. </b>Dọn dẹp tài nguyên  
+      <a href="../../vi/5-cloudfront/">
+          <b>5. </b>Tạo CloudFront
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-cleanup/" title="Dọn dẹp tài nguyên" class="dd-item 
+        
+        
+        
+        ">
+      <a href="../../vi/6-cleanup/">
+          <b>6. </b>Dọn dẹp tài nguyên
           
             <i class="fas fa-check read-icon"></i>
           
@@ -637,7 +663,7 @@
                   
                     
                     
-                      <option id="en" value="https://ntvinh04.github.io/workshop-aws/5-cleanup/">English</option>
+                      <option id="en" value="https://ntvinh04.github.io/workshop-aws/5-cloudfront/">English</option>
                     
                   
               
@@ -651,7 +677,7 @@
                   
                     
                     
-                      <option id="vi" value="https://ntvinh04.github.io/workshop-aws/vi/5-cleanup/" selected>Tiếng Việt</option>
+                      <option id="vi" value="https://ntvinh04.github.io/workshop-aws/vi/5-cloudfront/" selected>Tiếng Việt</option>
                     
                   
               
@@ -721,7 +747,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/NTVinh04/workshop-aws/edit/main/content5-cleanup/_index.vi.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/NTVinh04/workshop-aws/edit/main/content5-CloudFront/_index.vi.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -748,7 +774,7 @@
             
           
           
-            <a href='../../vi/'>WebChat Serverless realtime</a> > Dọn dẹp tài nguyên  
+            <a href='../../vi/'>WebChat Serverless realtime</a> > Tạo CloudFront
           
         
           
@@ -759,15 +785,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -783,7 +801,7 @@
           
             <h1>
               
-              Dọn dẹp tài nguyên  
+              Tạo CloudFront
             </h1>
           
 
@@ -791,79 +809,38 @@
 
 
 
-	<p>Bây giờ là các bước cần tiến hành để xóa các tài nguyên đã tạo.</p>
-<h4 id="xóa-s3">Xóa S3</h4>
+	<p>Sau khi đã upload Webchat lên S3 và sử dụng thì khi những tin nhắn quá nhiều hoặc hình ảnh có dung lượng lớn thì sẽ tải lên mất rất nhiều thời gian để hiện nên sử dụng CloudFront để tăng tốc website giúp website mượt hơn</p>
 <ol>
-<li>Truy cập <a href="https://s3.console.aws.amazon.com/s3/home">S3</a></li>
+<li>Truy cập <a href="https://console.aws.amazon.com/cloudfront">CloudFront</a></li>
 </ol>
 <ul>
-<li>Click chọn S3 bucket đã tạo</li>
-<li>Click <strong>Empty</strong>.</li>
-<li>Điền <strong>permanently delete</strong>, sau đó click <strong>Empty</strong> để tiến hành xóa object trong bucket.</li>
-<li>Click <strong>Exit</strong>.</li>
+<li>Click <strong>Create a CloudFront distribution</strong>.
+<img src="../../images/5.cloud/001.png" alt="cloudfront"></li>
+<li>Ở trường <strong>Distributions</strong> nhập <code>vchat </code> để giúp nhận biết được vai trò của <strong>CloudFront</strong> này để làm gì</li>
+<li>Có thể nhập thêm ở trường <strong>Description</strong> để chi tiết hơn</li>
+<li>Click <strong>Next</strong>.
+<img src="../../images/5.cloud/002.png" alt="cloudfront1"></li>
+<li><strong>Origin Type</strong> chọn <strong>Amazon S3</strong></li>
+<li>Ở trường <strong>S3 origin</strong> nhập url của <strong>chatapp</strong> từ S3 hoặc chọn <strong>Browse S3</strong> và tìm bucket chứa website
+<img src="../../images/5.cloud/004.png" alt="cloudfront"></li>
+<li>Sau đó chọn <strong>Use website endpoint</strong> sau đó ấn <strong>Next</strong>
+<img src="../../images/5.cloud/005.png" alt="cloudfront">
+<img src="../../images/5.cloud/006.png" alt="cloudfront"></li>
+<li>Vì là dự án cá nhân và không có dữ liệu quan trọng nên có thể chọn <strong>Do not enable security protections</strong> và ấn <strong>Next</strong>
+<img src="../../images/5.cloud/007.png" alt="cloudfront"></li>
+<li>Sau khi xong chờ khoảng 5p để <strong>Last modified</strong> hiện thời gian là đã deloy xong
+<img src="../../images/5.cloud/008.png" alt="cloudfront">
+<img src="../../images/5.cloud/009.png" alt="cloudfront"></li>
 </ul>
 <ol start="2">
-<li>Sau khi xóa hết object trong bucket, click <strong>Delete</strong></li>
+<li>Sau khi đã deloy xong thì copy <strong>Distribution domain name</strong> và test
+<img src="../../images/5.cloud/010.png" alt="web"></li>
 </ol>
 <ul>
-<li>Sau đó nhập tên bucket và click <strong>Delte bucket</strong></li>
-</ul>
-<h4 id="xóa-api-gateway">Xóa API Gateway</h4>
-<p>Truy cập <a href="https://console.aws.amazon.com/apigateway">API Gateway</a>.</p>
-<ul>
-<li>Click chọn API đã tạo</li>
-<li>Click <strong>Delete</strong></li>
-<li>Điền <strong>confirm</strong> và click <strong>Delete</strong></li>
-</ul>
-<h4 id="xóa-cloudwatch">Xóa CloudWatch</h4>
-<p>Truy cập <a href="https://console.aws.amazon.com/cloudwatch">CloudWatch</a>.</p>
-<ul>
-<li>Ở thanh bên trái chọn <strong>Logs</strong> sau đó chọn <strong>Log groups</strong></li>
-<li>Click chọn các log group được tạo ra trong lúc thực hiện</li>
-<li>Click <strong>Action</strong> và chọn <strong>Delete log group(s)</strong></li>
-<li>Click <strong>Delete</strong></li>
-</ul>
-<h4 id="xóa-policy">Xóa Policy</h4>
-<p>Truy cập <a href="https://console.aws.amazon.com/iamv2/">IAM</a>.</p>
-<ul>
-<li>Ở thanh bên trái chọn <strong>Policies</strong></li>
-<li>Click chọn policy được tạo ra trong lúc thực hiện</li>
-<li>Click <strong>Delete</strong></li>
-<li>Điền tên policy và click <strong>Delete</strong></li>
-</ul>
-<h4 id="xóa-role">Xóa Role</h4>
-<p>Truy cập <a href="https://console.aws.amazon.com/iamv2/">IAM</a>.</p>
-<ul>
-<li>Ở thanh bên trái chọn <strong>Roles</strong></li>
-<li>Click chọn role được tạo ra trong lúc thực hiện</li>
-<li>Click <strong>Delete</strong></li>
-<li>Điền tên role và click <strong>Delete</strong></li>
-</ul>
-<h4 id="xóa-lambda">Xóa Lambda</h4>
-<p>Truy cập vào trang dịch vụ <a href="https://console.aws.amazon.com/lambda">Lambda</a></p>
-<ul>
-<li>Ở thanh bên trái chọn <strong>Functions</strong></li>
-<li>Click chọn các functions được tạo ra trong lúc thực hiện</li>
-<li>Click <strong>Action</strong> và chọn <strong>Delete</strong></li>
-<li>Điền <strong>confirm</strong> và click <strong>Delete</strong></li>
-</ul>
-<h4 id="xóa-dynamodb">Xóa DynamoDB</h4>
-<p>Truy cập vào dịch vụ <a href="https://console.aws.amazon.com/dynamodb/">DynamoDB</a></p>
-<ul>
-<li>Ở thanh bên trái chọn <strong>Tables</strong></li>
-<li>Click chọn các tables được tạo ra trong lúc thực hiện</li>
-<li>Click <strong>Delete</strong></li>
-<li>Chọn <strong>Delete all CloudWatch alarms for the 2 tables tables selected</strong>.</li>
-<li>Điền <strong>confirm</strong> và click <strong>Delete</strong></li>
-</ul>
-<h4 id="xóa">Xóa</h4>
-<p>Truy cập vào dịch vụ <a href="https://console.aws.amazon.com/cognito/">Cognito</a></p>
-<ul>
-<li>Ở thanh bên trái chọn <strong>User pools</strong></li>
-<li>Click chọn các user pools được tạo ra trong lúc thực hiện</li>
-<li>Click <strong>Delete</strong></li>
-<li>Chọn <strong>Delete Cognito domain ap-southeast-1vhb6cgguj that you assigned</strong> và <strong>Deactivate deletion protection</strong>.</li>
-<li>Điền tên user pool và click <strong>Delete</strong></li>
+<li>Đây là url của <strong>S3</strong> thì có thể thấy là ở time sẽ tốn 169ms để xuất giao diện
+<img src="../../images/5.cloud/011.png" alt="web1"></li>
+<li>Đây là url của <strong>CloudFront</strong> cung cấp thì time chỉ cần 9ms để xuất được giao diện
+<img src="../../images/5.cloud/012.png" alt="web2"></li>
 </ul>
 
 
@@ -1186,6 +1163,25 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
         
@@ -1198,7 +1194,7 @@
 			<a class="nav nav-prev" href="../../vi/4-s3/" title="Tải code lên S3"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../vi/1-introduce/" title="Giới thiệu" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../vi/6-cleanup/" title="Dọn dẹp tài nguyên" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1208,19 +1204,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1755169505"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1755169505"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1755169505"></script>
-    <script src="../../js/jquery.sticky.js?1755169505"></script>
-    <script src="../../js/featherlight.min.js?1755169505"></script>
-    <script src="../../js/highlight.pack.js?1755169505"></script>
+    <script src="../../js/clipboard.min.js?1755190819"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1755190819"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1755190819"></script>
+    <script src="../../js/jquery.sticky.js?1755190819"></script>
+    <script src="../../js/featherlight.min.js?1755190819"></script>
+    <script src="../../js/highlight.pack.js?1755190819"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1755169505"></script>
-    <script src="../../js/learn.js?1755169505"></script>
-    <script src="../../js/hugo-learn.js?1755169505"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1755190819"></script>
+    <script src="../../js/learn.js?1755190819"></script>
+    <script src="../../js/hugo-learn.js?1755190819"></script>
 
-    <link href="../../mermaid/mermaid.css?1755169505" rel="stylesheet" />
-    <script src="../../mermaid/mermaid.js?1755169505"></script>
+    <link href="../../mermaid/mermaid.css?1755190819" rel="stylesheet" />
+    <script src="../../mermaid/mermaid.js?1755190819"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

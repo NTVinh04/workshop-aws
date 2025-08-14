@@ -1,9 +1,9 @@
 ---
-title: “Create an S3 bucket for images”
+title: "Create an S3 bucket for images"
 date: 2025-08-11
 weight: 2 
 chapter: false
-pre: “ <b> 2.1.2 </b> ”
+pre: " <b> 2.1.2 </b> "
 ---
 ### Create an S3 bucket for images
 1. Access the [S3](https://console.aws.amazon.com/s3/home) service

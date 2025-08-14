@@ -1,9 +1,9 @@
 ---
-title: “Create REST API”
+title: "Create REST API"
 date: 2025-08-11
 weight: 2
 chapter: false
-pre: “ <b> 3.2.2 </b> ”
+pre: " <b> 3.2.2 </b> "
 ---
 1. Access the [API Gateway](https://console.aws.amazon.com/apigateway) service interface.
   + Click **create an API**.

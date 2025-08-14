@@ -1,9 +1,9 @@
 ---
-title: “Lambda Websocket”
+title: "Lambda Websocket"
 date: 2025-08-11
 weight: 2 
 chapter: false
-pre: “ <b> 3.1.2 </b> ”
+pre: " <b> 3.1.2 </b> "
 ---
 1. Access the [Lambda](https://console.aws.amazon.com/lambda) service page.
   + Click **Create function**.

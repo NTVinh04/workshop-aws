@@ -1,9 +1,9 @@
 ---
-title: “Preparation Steps”
+title: "Preparation Steps"
 date: 2025-08-11
 weight: 2 
 chapter: false
-pre: “ <b> 2. </b> ”
+pre: " <b> 2. </b> "
 ---
 
 ### Content

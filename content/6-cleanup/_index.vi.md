@@ -1,9 +1,9 @@
 ---
-title : "Dọn dẹp tài nguyên  "
+title : "Dọn dẹp tài nguyên"
 date : 2025-08-11
-weight : 5
+weight : 6
 chapter : false
-pre : "<b>5. </b>"
+pre : "<b>6. </b>"
 ---
 
 Bây giờ là các bước cần tiến hành để xóa các tài nguyên đã tạo.
@@ -62,10 +62,17 @@ Truy cập vào dịch vụ [DynamoDB](https://console.aws.amazon.com/dynamodb/)
   + Chọn **Delete all CloudWatch alarms for the 2 tables tables selected**.
   + Điền **confirm** và click **Delete**
 
-#### Xóa 
+#### Xóa Cognito
 Truy cập vào dịch vụ [Cognito](https://console.aws.amazon.com/cognito/)
   + Ở thanh bên trái chọn **User pools**
   + Click chọn các user pools được tạo ra trong lúc thực hiện
   + Click **Delete**
   + Chọn **Delete Cognito domain ap-southeast-1vhb6cgguj that you assigned** và **Deactivate deletion protection**.
   + Điền tên user pool và click **Delete**
+
+#### Xóa CloudFront
+Truy cập vào dịch vụ [CloudFront](https://console.aws.amazon.com/cloudfront/)
+  + Ở thanh bên trái chọn **Distributions**
+  + Click chọn các **Distributions** được tạo ra trong lúc thực hiện
+  + Click **Disable** và chờ khi **Last modified** không còn hiện **deloyinng**
+  + Click **Delete** và xác nhận xóa

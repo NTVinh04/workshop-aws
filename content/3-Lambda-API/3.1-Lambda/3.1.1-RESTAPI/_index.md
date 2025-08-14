@@ -1,9 +1,9 @@
 ---
-title: “Lambda REST API”
+title: "Lambda REST API"
 date: 2025-08-11
 weight: 1 
 chapter: false
-pre: “ <b> 3.1.1 </b> ”
+pre: " <b> 3.1.1 </b> "
 ---
 1. Access the [Lambda](https://console.aws.amazon.com/lambda) service page.
 ![Lambda](/images/3.lambda-api/001.png)

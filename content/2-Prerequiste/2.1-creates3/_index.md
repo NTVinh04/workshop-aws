@@ -1,9 +1,9 @@
 ---
-title: “Create S3”
+title: "Create S3"
 date: 2025-08-11
 weight: 1 
 chapter: false
-pre: “ <b> 2.1 </b> ”
+pre: " <b> 2.1 </b> "
 ---
 In this step, you will need to create two buckets in **S3**: one bucket for storing and running the website, and another bucket for storing avatars and images from messages sent between users.
 

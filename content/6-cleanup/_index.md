@@ -1,9 +1,9 @@
 ---
-title : “Cleaning up resources  ”
+title : "Cleaning up resources"
 date : 2025-08-11
-weight : 5
+weight : 6
 chapter : false
-pre : “<b>5. </b>”
+pre : "<b>6. </b>"
 ---
 
 Now, here are the steps to delete the resources you created.
@@ -62,10 +62,17 @@ Access the [DynamoDB](https://console.aws.amazon.com/dynamodb/) service.
   + Select **Delete all CloudWatch alarms for the 2 tables selected**.
   + Enter **confirm** and click **Delete**
 
-#### Delete 
-Access the Cognito service (https://console.aws.amazon.com/cognito/)
+#### Delete Cognito
+Access the [Cognito](https://console.aws.amazon.com/cognito/)
   + On the left sidebar, select **User pools**
   + Click to select the user pools created during the process
   + Click **Delete**
   + Select **Delete Cognito domain ap-southeast-1vhb6cgguj that you assigned** and **Deactivate deletion protection**.
   + Enter the user pool name and click **Delete**
+
+#### Delete CloudFront
+Access the [CloudFront](https://console.aws.amazon.com/cloudfront/) service
+  + On the left sidebar, select **Distributions**
+  + Click on the **Distributions** created during the process
+  + Click **Disable** and wait until **Last modified** no longer shows **deloyinng**
+  + Click **Delete** and confirm deletion

@@ -35,7 +35,7 @@ Organize your site like [any other Hugo project](https://gohugo.io/content/organ
     └── page-top.md                     <-- /page-top
 
 {{% notice note %}}
-`_index.md` is required in each folder, it’s your “folder home page”
+`_index.md` is required in each folder, it’s your "folder home page"
 {{% /notice %}}
 
 ## Types

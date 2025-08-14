@@ -1,9 +1,9 @@
 ---
-title: “Introduction”
+title: "Introduction"
 date: 2025-08-11
 weight: 1 
 chapter: false
-pre: “ <b> 1. </b> ”
+pre: " <b> 1. </b> "
 ---
 
 ### Overview
@@ -19,4 +19,5 @@ This is a workshop about serverless real-time webchat on AWS using **S3** to sto
 2. [Preparation steps](2-Prerequisites/)
  3. [Create Lambda and API Gateway](3-Lambda-API/)
  4. [Upload code to S3](4-s3/)
- 5. [Clean up resources](5-cleanup/)
+ 5. [Create CloudFront](5-CloudFront/)
+ 6. [Clean up resources](6-cleanup/)

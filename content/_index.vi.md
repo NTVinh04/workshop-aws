@@ -19,4 +19,5 @@ chapter : false
  2. [Các bước chuẩn bị](2-Prerequiste/)
  3. [Tạo Lambda và API Gateway](3-Lambda-API/)
  4. [Tải code lên S3](4-s3/)
- 5. [Dọn dẹp tài nguyên](5-cleanup/)
+ 5. [Dùng CloudFront để tối ưu Web](5-CloudFront)
+ 6. [Dọn dẹp tài nguyên](6-cleanup/)

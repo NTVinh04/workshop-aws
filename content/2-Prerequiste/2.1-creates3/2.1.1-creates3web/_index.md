@@ -1,9 +1,9 @@
 ---
-title: “Create an S3 bucket for website”
+title: "Create an S3 bucket for website"
 date: 2025-08-11
 weight: 1 
 chapter: false
-pre: “ <b> 2.1.1 </b> ”
+pre: " <b> 2.1.1 </b> "
 ---
 
 #### Create an S3 bucket for website
