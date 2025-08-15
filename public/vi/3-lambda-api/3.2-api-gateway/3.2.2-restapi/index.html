@@ -12,21 +12,21 @@
     <title>Tạo REST API :: AWS System Manager</title>
 
     
-    <link href="../../../../css/nucleus.css?1755190819" rel="stylesheet">
-    <link href="../../../../css/fontawesome-all.min.css?1755190819" rel="stylesheet">
-    <link href="../../../../css/hybrid.css?1755190819" rel="stylesheet">
-    <link href="../../../../css/featherlight.min.css?1755190819" rel="stylesheet">
-    <link href="../../../../css/perfect-scrollbar.min.css?1755190819" rel="stylesheet">
-    <link href="../../../../css/auto-complete.css?1755190819" rel="stylesheet">
-    <link href="../../../../css/atom-one-dark-reasonable.css?1755190819" rel="stylesheet">
-    <link href="../../../../css/theme.css?1755190819" rel="stylesheet">
-    <link href="../../../../css/hugo-theme.css?1755190819" rel="stylesheet">
+    <link href="../../../../css/nucleus.css?1755280909" rel="stylesheet">
+    <link href="../../../../css/fontawesome-all.min.css?1755280909" rel="stylesheet">
+    <link href="../../../../css/hybrid.css?1755280909" rel="stylesheet">
+    <link href="../../../../css/featherlight.min.css?1755280909" rel="stylesheet">
+    <link href="../../../../css/perfect-scrollbar.min.css?1755280909" rel="stylesheet">
+    <link href="../../../../css/auto-complete.css?1755280909" rel="stylesheet">
+    <link href="../../../../css/atom-one-dark-reasonable.css?1755280909" rel="stylesheet">
+    <link href="../../../../css/theme.css?1755280909" rel="stylesheet">
+    <link href="../../../../css/hugo-theme.css?1755280909" rel="stylesheet">
     
-    <link href="../../../../css/theme-workshop.css?1755190819" rel="stylesheet">
+    <link href="../../../../css/theme-workshop.css?1755280909" rel="stylesheet">
     
     
 
-    <script src="../../../../js/jquery-3.3.1.min.js?1755190819"></script>
+    <script src="../../../../js/jquery-3.3.1.min.js?1755280909"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,15 +58,15 @@
 </div>
 
 
-<script src='../../../../js/lunr.min.js?1755190819'></script>
-<script src='../../../../js/auto-complete.js?1755190819'></script>
+<script src='../../../../js/lunr.min.js?1755280909'></script>
+<script src='../../../../js/auto-complete.js?1755280909'></script>
 
 <script>
   
   var baseurl = '\/vi\/';
 </script>
 
-<script src='../../../../js/search.js?1755190819'></script>
+<script src='../../../../js/search.js?1755280909'></script>
 
     
   </div>
@@ -864,7 +864,7 @@
 <img src="../../../../images/3.lambda-api/034.png" alt="user1"></li>
 <li>Ở <strong>Method type</strong> chọn <strong>GET</strong></li>
 <li>Bật <strong>Lambda proxy integration</strong></li>
-<li>Ở <strong>Lambda function</strong> chọn function <strong>getUser</strong> sau đó click <strong>Create method</strong>
+<li>Ở <strong>Lambda function</strong> chọn function <code>getUser</code> sau đó click <strong>Create method</strong>
 <img src="../../../../images/3.lambda-api/035.png" alt="user2"></li>
 <li>Sau đó method GET chọn mục <strong>Method request</strong> chọn edit
 <img src="../../../../images/3.lambda-api/036.png" alt="user3"></li>
@@ -876,14 +876,33 @@
 <img src="../../../../images/3.lambda-api/032.png" alt="user6"></li>
 </ul>
 <ol start="4">
-<li>Lặp lại các bước ở phần 3 để tạo các Rest API sau:</li>
+<li>Tiếp theo là tạo resource <code>send-message</code> với Method POST, Lambda function <code>sendMessage</code>
+<img src="../../../../images/3.lambda-api/046.png" alt="sendMessage"></li>
 </ol>
 <ul>
-<li><strong>send-message</strong> với Method POST, Lambda function <strong>sendMessage</strong></li>
-<li><strong>create-user</strong> với Method POST, Lambda function <strong>createUser</strong></li>
-<li><strong>me</strong> với Method GET, Lambda function <strong>me</strong></li>
+<li>Gắn <strong>Authorization</strong> cho method <strong>send-message</strong>
+<img src="../../../../images/3.lambda-api/052.png" alt="sendMessage1"></li>
+<li>Bật <strong>CORS</strong> cho method <strong>send-message</strong>
+<img src="../../../../images/3.lambda-api/051.png" alt="sendMessage2">
+5.Sau đó tạo resource <code>create-user</code> với Method POST, Lambda function <code>createUser</code>
+<img src="../../../../images/3.lambda-api/048.png" alt="createUser"></li>
+<li>Gắn <strong>Authorization</strong> cho method <strong>create-user</strong>
+<img src="../../../../images/3.lambda-api/053.png" alt="createUser1"></li>
+<li>Bật <strong>CORS</strong> cho method <strong>create-user</strong>
+<img src="../../../../images/3.lambda-api/049.png" alt="createUser2"></li>
 </ul>
-<ol start="5">
+<ol start="6">
+<li><code>me    </code> với Method GET, Lambda function <code>me    </code>
+<img src="../../../../images/3.lambda-api/050.png" alt="me"></li>
+</ol>
+<ul>
+<li>Gắn <strong>Authorization</strong> cho method <strong>me</strong>
+<img src="../../../../images/3.lambda-api/054.png" alt="me1"></li>
+<li>Bật <strong>CORS</strong> cho method <strong>me</strong>
+<img src="../../../../images/3.lambda-api/055.png" alt="me2">
+<img src="../../../../images/3.lambda-api/056.png" alt="me3"></li>
+</ul>
+<ol start="7">
 <li>Từ resource /me tạo thêm 1 method PUT với function <strong>updateAvatar</strong>
 <img src="../../../../images/3.lambda-api/038.png" alt="me"></li>
 </ol>
@@ -898,7 +917,7 @@
 
 <img src="../../../../images/3.lambda-api/040.png" alt="avatar1"></li>
 </ul>
-<ol start="6">
+<ol start="8">
 <li>Từ resource / chọn <strong>Create resource</strong> và tạo resource <code>message</code>
 <img src="../../../../images/3.lambda-api/041.png" alt="message"></li>
 </ol>
@@ -1286,19 +1305,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../../js/clipboard.min.js?1755190819"></script>
-    <script src="../../../../js/perfect-scrollbar.min.js?1755190819"></script>
-    <script src="../../../../js/perfect-scrollbar.jquery.min.js?1755190819"></script>
-    <script src="../../../../js/jquery.sticky.js?1755190819"></script>
-    <script src="../../../../js/featherlight.min.js?1755190819"></script>
-    <script src="../../../../js/highlight.pack.js?1755190819"></script>
+    <script src="../../../../js/clipboard.min.js?1755280909"></script>
+    <script src="../../../../js/perfect-scrollbar.min.js?1755280909"></script>
+    <script src="../../../../js/perfect-scrollbar.jquery.min.js?1755280909"></script>
+    <script src="../../../../js/jquery.sticky.js?1755280909"></script>
+    <script src="../../../../js/featherlight.min.js?1755280909"></script>
+    <script src="../../../../js/highlight.pack.js?1755280909"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../../js/modernizr.custom-3.6.0.js?1755190819"></script>
-    <script src="../../../../js/learn.js?1755190819"></script>
-    <script src="../../../../js/hugo-learn.js?1755190819"></script>
+    <script src="../../../../js/modernizr.custom-3.6.0.js?1755280909"></script>
+    <script src="../../../../js/learn.js?1755280909"></script>
+    <script src="../../../../js/hugo-learn.js?1755280909"></script>
 
-    <link href="../../../../mermaid/mermaid.css?1755190819" rel="stylesheet" />
-    <script src="../../../../mermaid/mermaid.js?1755190819"></script>
+    <link href="../../../../mermaid/mermaid.css?1755280909" rel="stylesheet" />
+    <script src="../../../../mermaid/mermaid.js?1755280909"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

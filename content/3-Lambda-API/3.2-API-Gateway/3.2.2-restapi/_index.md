@@ -44,11 +44,26 @@ pre: " <b> 3.2.2 </b> "
 ![user5](/images/3.lambda-api/031.png)
   + Select all boxes and click **Save**
 ![user6](/images/3.lambda-api/032.png)
-4. Repeat the steps in section 3 to create the following Rest APIs:
-  + **send-message** with POST method, Lambda function **sendMessage**
-  + **create-user** with POST method, Lambda function **createUser**
-  + **me** with GET method, Lambda function **me**
-5. From the /me resource, create an additional PUT method with the **updateAvatar** function
+4. Next, create the resource ```send-message``` with the POST method and the Lambda function ```sendMessage```
+![sendMessage](/images/3.lambda-api/046.png)
++ Add **Authorization** to the **send-message** method
+![sendMessage1](/images/3.lambda-api/052.png)
+  + Enable **CORS** for the **send-message** method
+![sendMessage2](/images/3.lambda-api/051.png)
+5. Then create the resource ```create-user``` with the POST method, Lambda function ```createUser```
+![createUser](/images/3.lambda-api/048.png)
+  + Attach **Authorization** to the **create-user** method
+![createUser1](/images/3.lambda-api/053.png)
+  + Enable **CORS** for the **create-user** method
+![createUser2](/images/3.lambda-api/049.png)
+6. ```me    ``` with GET method, Lambda function ```me    ```
+![me](/images/3.lambda-api/050.png)
+  + Add **Authorization** to the **me** method
+![me1](/images/3.lambda-api/054.png)
+  + Enable **CORS** for the **me** method
+![me2](/images/3.lambda-api/055.png)
+![me3](/images/3.lambda-api/056.png)
+7. From the /me resource, create an additional PUT method with the **updateAvatar** function
 ![me](/images/3.lambda-api/038.png)
   + After creating the /me resource, create an additional /avatar resource
 ![avatar](/images/3.lambda-api/039.png)
@@ -58,7 +73,7 @@ pre: " <b> 3.2.2 </b> "
 The reason why /me uses the PUT method and /avatar uses the POST method is because POST is used to create something that does not yet exist, while PUT is used to replace something that already exists. /avatar is used to create an S3 URL to store the avatar created by the user, while the PUT of /me replaces the URL just created by /avatar in the User table.
   {{% /notice %}}
 ![avatar1](/images/3.lambda-api/040.png)
-6. From the resource / select **Create resource** and create the resource ```message```
+8. From the resource / select **Create resource** and create the resource ```message```
 ![message](/images/3.lambda-api/041.png)
 + From the resource /message select **Create resource** and create the resource ```{conversationId}```
 ![message1](/images/3.lambda-api/042.png)

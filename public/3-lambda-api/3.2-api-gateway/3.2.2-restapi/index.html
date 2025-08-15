@@ -12,21 +12,21 @@
     <title>Create REST API :: AWS System Manager</title>
 
     
-    <link href="../../../css/nucleus.css?1755190819" rel="stylesheet">
-    <link href="../../../css/fontawesome-all.min.css?1755190819" rel="stylesheet">
-    <link href="../../../css/hybrid.css?1755190819" rel="stylesheet">
-    <link href="../../../css/featherlight.min.css?1755190819" rel="stylesheet">
-    <link href="../../../css/perfect-scrollbar.min.css?1755190819" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1755190819" rel="stylesheet">
-    <link href="../../../css/atom-one-dark-reasonable.css?1755190819" rel="stylesheet">
-    <link href="../../../css/theme.css?1755190819" rel="stylesheet">
-    <link href="../../../css/hugo-theme.css?1755190819" rel="stylesheet">
+    <link href="../../../css/nucleus.css?1755280909" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1755280909" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1755280909" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1755280909" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1755280909" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1755280909" rel="stylesheet">
+    <link href="../../../css/atom-one-dark-reasonable.css?1755280909" rel="stylesheet">
+    <link href="../../../css/theme.css?1755280909" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1755280909" rel="stylesheet">
     
-    <link href="../../../css/theme-workshop.css?1755190819" rel="stylesheet">
+    <link href="../../../css/theme-workshop.css?1755280909" rel="stylesheet">
     
     
 
-    <script src="../../../js/jquery-3.3.1.min.js?1755190819"></script>
+    <script src="../../../js/jquery-3.3.1.min.js?1755280909"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,15 +58,15 @@
 </div>
 
 
-<script src='../../../js/lunr.min.js?1755190819'></script>
-<script src='../../../js/auto-complete.js?1755190819'></script>
+<script src='../../../js/lunr.min.js?1755280909'></script>
+<script src='../../../js/auto-complete.js?1755280909'></script>
 
 <script>
   
   var baseurl = '\/';
 </script>
 
-<script src='../../../js/search.js?1755190819'></script>
+<script src='../../../js/search.js?1755280909'></script>
 
     
   </div>
@@ -876,14 +876,40 @@
 <img src="../../../images/3.lambda-api/032.png" alt="user6"></li>
 </ul>
 <ol start="4">
-<li>Repeat the steps in section 3 to create the following Rest APIs:</li>
+<li>Next, create the resource <code>send-message</code> with the POST method and the Lambda function <code>sendMessage</code>
+<img src="../../../images/3.lambda-api/046.png" alt="sendMessage"></li>
 </ol>
 <ul>
-<li><strong>send-message</strong> with POST method, Lambda function <strong>sendMessage</strong></li>
-<li><strong>create-user</strong> with POST method, Lambda function <strong>createUser</strong></li>
-<li><strong>me</strong> with GET method, Lambda function <strong>me</strong></li>
+<li>Add <strong>Authorization</strong> to the <strong>send-message</strong> method
+<img src="../../../images/3.lambda-api/052.png" alt="sendMessage1">
+<ul>
+<li>Enable <strong>CORS</strong> for the <strong>send-message</strong> method
+<img src="../../../images/3.lambda-api/051.png" alt="sendMessage2"></li>
+</ul>
+</li>
 </ul>
 <ol start="5">
+<li>Then create the resource <code>create-user</code> with the POST method, Lambda function <code>createUser</code>
+<img src="../../../images/3.lambda-api/048.png" alt="createUser"></li>
+</ol>
+<ul>
+<li>Attach <strong>Authorization</strong> to the <strong>create-user</strong> method
+<img src="../../../images/3.lambda-api/053.png" alt="createUser1"></li>
+<li>Enable <strong>CORS</strong> for the <strong>create-user</strong> method
+<img src="../../../images/3.lambda-api/049.png" alt="createUser2"></li>
+</ul>
+<ol start="6">
+<li><code>me    </code> with GET method, Lambda function <code>me    </code>
+<img src="../../../images/3.lambda-api/050.png" alt="me"></li>
+</ol>
+<ul>
+<li>Add <strong>Authorization</strong> to the <strong>me</strong> method
+<img src="../../../images/3.lambda-api/054.png" alt="me1"></li>
+<li>Enable <strong>CORS</strong> for the <strong>me</strong> method
+<img src="../../../images/3.lambda-api/055.png" alt="me2">
+<img src="../../../images/3.lambda-api/056.png" alt="me3"></li>
+</ul>
+<ol start="7">
 <li>From the /me resource, create an additional PUT method with the <strong>updateAvatar</strong> function
 <img src="../../../images/3.lambda-api/038.png" alt="me"></li>
 </ol>
@@ -898,7 +924,7 @@
 
 <img src="../../../images/3.lambda-api/040.png" alt="avatar1"></li>
 </ul>
-<ol start="6">
+<ol start="8">
 <li>From the resource / select <strong>Create resource</strong> and create the resource <code>message</code>
 <img src="../../../images/3.lambda-api/041.png" alt="message"></li>
 </ol>
@@ -1286,19 +1312,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../js/clipboard.min.js?1755190819"></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1755190819"></script>
-    <script src="../../../js/perfect-scrollbar.jquery.min.js?1755190819"></script>
-    <script src="../../../js/jquery.sticky.js?1755190819"></script>
-    <script src="../../../js/featherlight.min.js?1755190819"></script>
-    <script src="../../../js/highlight.pack.js?1755190819"></script>
+    <script src="../../../js/clipboard.min.js?1755280909"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1755280909"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1755280909"></script>
+    <script src="../../../js/jquery.sticky.js?1755280909"></script>
+    <script src="../../../js/featherlight.min.js?1755280909"></script>
+    <script src="../../../js/highlight.pack.js?1755280909"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../js/modernizr.custom-3.6.0.js?1755190819"></script>
-    <script src="../../../js/learn.js?1755190819"></script>
-    <script src="../../../js/hugo-learn.js?1755190819"></script>
+    <script src="../../../js/modernizr.custom-3.6.0.js?1755280909"></script>
+    <script src="../../../js/learn.js?1755280909"></script>
+    <script src="../../../js/hugo-learn.js?1755280909"></script>
 
-    <link href="../../../mermaid/mermaid.css?1755190819" rel="stylesheet" />
-    <script src="../../../mermaid/mermaid.js?1755190819"></script>
+    <link href="../../../mermaid/mermaid.css?1755280909" rel="stylesheet" />
+    <script src="../../../mermaid/mermaid.js?1755280909"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

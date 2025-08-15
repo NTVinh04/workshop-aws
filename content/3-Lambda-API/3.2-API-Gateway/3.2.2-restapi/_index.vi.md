@@ -34,7 +34,7 @@ pre : " <b> 3.2.2 </b> "
 ![user1](/images/3.lambda-api/034.png)
   + Ở **Method type** chọn **GET** 
   + Bật **Lambda proxy integration**
-  + Ở **Lambda function** chọn function **getUser** sau đó click **Create method**
+  + Ở **Lambda function** chọn function ```getUser``` sau đó click **Create method**
 ![user2](/images/3.lambda-api/035.png)
   + Sau đó method GET chọn mục **Method request** chọn edit
 ![user3](/images/3.lambda-api/036.png)
@@ -44,11 +44,26 @@ pre : " <b> 3.2.2 </b> "
 ![user5](/images/3.lambda-api/031.png)
   + Chọn hết tất cả các ô và ấn **Save**
 ![user6](/images/3.lambda-api/032.png)
-4. Lặp lại các bước ở phần 3 để tạo các Rest API sau:
-  + **send-message** với Method POST, Lambda function **sendMessage**
-  + **create-user** với Method POST, Lambda function **createUser**
-  + **me** với Method GET, Lambda function **me**
-5. Từ resource /me tạo thêm 1 method PUT với function **updateAvatar**
+4. Tiếp theo là tạo resource ```send-message``` với Method POST, Lambda function ```sendMessage```
+![sendMessage](/images/3.lambda-api/046.png)
+  + Gắn **Authorization** cho method **send-message**
+![sendMessage1](/images/3.lambda-api/052.png)
+  + Bật **CORS** cho method **send-message**
+![sendMessage2](/images/3.lambda-api/051.png)
+5.Sau đó tạo resource ```create-user``` với Method POST, Lambda function ```createUser```
+![createUser](/images/3.lambda-api/048.png)
+  + Gắn **Authorization** cho method **create-user**
+![createUser1](/images/3.lambda-api/053.png)
+  + Bật **CORS** cho method **create-user**
+![createUser2](/images/3.lambda-api/049.png)
+6. ```me    ``` với Method GET, Lambda function ```me    ```
+![me](/images/3.lambda-api/050.png)
+  + Gắn **Authorization** cho method **me**
+![me1](/images/3.lambda-api/054.png)
+  + Bật **CORS** cho method **me**
+![me2](/images/3.lambda-api/055.png)
+![me3](/images/3.lambda-api/056.png)
+7. Từ resource /me tạo thêm 1 method PUT với function **updateAvatar**
 ![me](/images/3.lambda-api/038.png)
   + Sau khi tạo xong từ resource /me tạo thêm 1 resource /avatar
 ![avatar](/images/3.lambda-api/039.png)
@@ -58,7 +73,7 @@ pre : " <b> 3.2.2 </b> "
 Lý do ở /me lại sử dụng method PUT còn /avatar lại sử dụng method POST là vì POST dùng để tạo cái chưa có còn PUT là để thay thế thứ đã có và /avatar là dùng để tạo url s3 để lưu trữ avatar do người dùng tạo lên còn PUT của /me là thay thế url vừa được tạo ra do /avatar vào trong table User
   {{% /notice %}}
 ![avatar1](/images/3.lambda-api/040.png)
-6. Từ resource / chọn **Create resource** và tạo resource ```message```
+8. Từ resource / chọn **Create resource** và tạo resource ```message```
 ![message](/images/3.lambda-api/041.png)
   + Từ resource /message chọn **Create resource** và tạo resource ```{conversationId}```
 ![message1](/images/3.lambda-api/042.png)
