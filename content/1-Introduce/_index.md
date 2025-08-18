@@ -11,8 +11,8 @@ pre: " <b> 1. </b> "
 This is a workshop about serverless real-time webchat on AWS using **S3** to store websites, store images uploaded by users via messages, or change user avatars. **Cognito** is used to handle user registration, login, and verification.
  Next, we will build an API using **Lambda** and **API Gateway** to manage data and user interactions with the system. Then, we will use **DynamoDB** to store data sent by **Lambda** to the system.
 
-![AWS](/images/aws.png) 
 [Project Test Link](http://chatapp-web.s3-website-ap-southeast-1.amazonaws.com/)
+![AWS](/images/aws.png) 
 ### Content
 
 1. [Introduction](1-introduce/)
